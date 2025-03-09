@@ -4,10 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Validator Page Student - provide your student name</title>
+    <title>Validator Page Student - Dulaksha Jayasinghe</title>
 
     <link rel="stylesheet" href="css/pageEditor_validator.css"> <!-- External CSS link -->
-
+    <!-- Font Awesome CDN for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
     
@@ -15,7 +16,7 @@
 
     <header>
         <nav>
-            <div class="logo"><img src="medicine.gif" alt="logo"> Good Health & Well-being</div>
+            <div class="logo"><img src="src/medicine.gif" alt="logo"> Good Health & Well-being</div>
             <ul class="nav-links">
                 <li><a href="home.html">Home</a></li>
                 <li><a href="volunteer.html">Volunteer</a></li>
@@ -29,7 +30,7 @@
     </header>
 
     <section class="stud">
-        <h2>Student name, student role</h2>
+        <h2>Dulaksha Jayasinghe, Student 2</h2>
     </section>
 
     <div class="container">
@@ -39,22 +40,22 @@
             <!-- Update the content of the following sections with the information that corresponds to the pages you implemented  -->
 
             <section>
-                <h2 id="splashVal">Splash Page validation report</h2>
+                <h2 id="home">Home Page validation report</h2>
                     <p>Include a short reflection on the validation report for the pages you implemented.</p> 
-                    <img src="validationSnapshots/validation_splash.png">
+                    <img src="validationSnapshots/homeValidation.png">
                                     
                 <h3>Back to Page Editor page</h3>
-                    <p><a href="pageEditor_ST0.html#splash">Include a link back to the corresponding section of the Page Editor.</a></p>
+                    <p><a href="pageEditor_ST2.html#home">Include a link back to the corresponding section of the Page Editor.</a></p>
                 <!-- Update the path to link the Page Editor with the validation page and make it jump to the marker that contains a snapshot for the splash page -->
             </section>
 
             <section>
-                <h2 id="volunteerVal">Volunteer Page validation report</h2>
+                <h2 id="table">Table Page validation report</h2>
                 <p>Include a short reflection on the validation report for the pages you implemented.</p>
-                    <img src="validationSnapshots/validation_splash.png">
+                    <img src="validationSnapshots/tableValidation.png">
                                     
                 <h3>Back to Page Editor page</h3>
-                    <p><a href="pageEditor_ST0.html#volunteer">Include a link back to the corresponding section of the Page Editor.</a></p>
+                    <p><a href="pageEditor_ST2.html#table">Include a link back to the corresponding section of the Page Editor.</a></p>
                 <!-- Update the path to link the Page Editor with the validation page and make it jump to the marker that contains a snapshot for the splash page -->
             </section></a></p>
 
@@ -64,7 +65,7 @@
                     <img src="validationSnapshots/validation_splash.png">
                                     
                 <h3>Back to Page Editor page</h3>
-                    <p><a href="pageEditor_ST0.html#content">Include a link back to the corresponding section of the Page Editor.</a></p>
+                    <p><a href="pageEditor_ST2.html#content">Include a link back to the corresponding section of the Page Editor.</a></p>
                 <!-- Update the path to link the Page Editor with the validation page and make it jump to the marker that contains a snapshot for the splash page -->
             </section></a></p>
 
@@ -81,15 +82,15 @@
                 <!-- Keep only the list items you were responsible to develop, delete the rest and update the links to the corresponding markers -->
                 <li>Student 1</li>
                     <ul> 
-                        <li><a href="#splashVal">Splash page validation</a></li>
-                        <li><a href="#volunteerVal">Volunteer page validation</a></li>
-                        <li><a href="#contentVal">Content page validation</a></li>
+                        <li><a href="#">Splash page validation</a></li>
+                        <li><a href="#">Volunteer page validation</a></li>
+                        <li><a href="#">Content page validation</a></li>
                     </ul>
                 <li>Student 2</li>
                     <ul>
-                        <li><a href="#">Home page </a></li>
-                        <li><a href="#">Table page</a></li>
-                        <li><a href="#">Content page</a></li>
+                        <li><a href="#home">Home page </a></li>
+                        <li><a href="#table">Table page</a></li>
+                        <li><a href="#contentVal">Content page</a></li>
                     </ul>
                 <li>Student 3</li>
                     <ul>
@@ -108,8 +109,39 @@
     </div>
 
     <footer>
-        <p>&copy; 2025 SDG 3 Website | <a href="pageEditor_ST2.html">Page Editor</a></p>
-        <!--Methana Line ekat ubalage page editor eka enna one-->
+        <div class="footer-container">
+            <!-- About Section -->
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>SDG 3 Website is dedicated to promoting good health and well-being through reliable information and resources.</p>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-section footer-links">
+                <h3>Quick Links</h3>
+                <a href="home.html">Home</a>
+                <a href=#about>About</a>
+                <a href="#">Contact</a>
+                <a href="pageEditor_ST2.html">Page Editor</a>
+            </div>
+
+            <!-- Social Media -->
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="footer-bottom">
+            <p>&copy; 2025 SDG 3 Website | All Rights Reserved</p>
+        </div>
+
     </footer>
 </body>
 </html>

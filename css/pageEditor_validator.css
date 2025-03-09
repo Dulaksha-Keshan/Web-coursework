@@ -3,12 +3,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background: #d4edda;
 }
 
 .container {
@@ -49,13 +51,14 @@ aside a{
 }
 
 aside li{
+    margin-left: 10px;
     padding-bottom: 4px;
 }
 
 .stud {
     text-align: center;
     line-height: 0;
-    background-color: #cbccc2ef;
+    background-color: #1C5C35;
     color: white;
     margin-top: 8px;
 }
@@ -177,26 +180,61 @@ nav:hover {
 
 
 footer {
-    display: flex;
-    color: #f4f8f4;
-    justify-content: center;
-    align-content: center;
-    padding: 15px 30px;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
     background-color: #1C5C35;
-    transition: all 0.3s ease-in-out;
-    position: relative;
-    bottom: 0;
-    width: 100vw;
-
 }
 
-footer p,
-a {
-    color: #f4f8f4;
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+    margin: 10px;
+}
+
+.footer-section h3 {
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 5px;
+    display: inline-block;
+}
+
+.social-icons a {
+    color: white;
     text-decoration: none;
+    font-size: 24px;
+    margin: 0 10px;
+    transition: color 0.3s ease;
 }
 
-footer:hover {
-    transform: translateY(-4px);
+.social-icons a:hover {
+    color: #3498db;
+}
 
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 14px;
+    border-top: 1px solid #444;
+    padding-top: 10px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    margin: 5px 0;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #3498db;
 }

@@ -4,10 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page Editor Student - provide your student name</title>
+    <title>Page Editor Student - Dulaksha Jayasinghe</title>
 
     <link rel="stylesheet" href="css/pageEditor_validator.css"> <!-- External CSS link -->
-
+    <!-- Font Awesome CDN for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
     
@@ -15,7 +16,7 @@
 
     <header>
         <nav>
-            <div class="logo"><img src="medicine.gif" alt="logo"> Good Health & Well-being</div>
+            <div class="logo"><img src="src/medicine.gif" alt="logo"> Good Health & Well-being</div>
             <ul class="nav-links">
                 <li><a href="home.html">Home</a></li>
                 <li><a href="volunteer.html">Volunteer</a></li>
@@ -29,7 +30,7 @@
     </header>
 
     <section class="stud">
-        <h2>Student name, student role</h2>
+        <h2>Dulaksha Jayasinghe , Student 2</h2>
     </section>
 
     <div class="container">
@@ -39,7 +40,7 @@
             <!-- Update those first three sections for the pages you were responsible to implement -->
 
             <section>
-                <h2 id="splash">Splash Page</h2>
+                <h2 id="home">Home Page</h2>
                     <h3>Technical Description</h3>
                         <p>Explain the HTML and CSS techniques used to implement this page. Justify the logic and purpose of the key tags and styling choices focusing on functionality and design without copying large code sections. Explain the purpose of key HTML tags and CSS properties. Specify key HTML tags and CSS properties used to create structure and styling.</p> 
                     
@@ -47,14 +48,14 @@
                         <p>Explain how you used to addressed accessibility in this particular page you implemented.</p>
                     
                     <h3>Link to the validation page</h3> <!-- Update the path to link the Page Editor with the splash page -->
-                        <p><a href="validation_ST0.html#splashVal">Include a link to the validation page</a>, use the marker to jump to the corresponding section of the validation page.</p> <!-- Update the path to link the Page Editor with the validation page and make it jump to the marker that contains a snapshot for the splash page -->
+                        <p><a href="validation_ST2.html#home">Include a link to the validation page</a>, use the marker to jump to the corresponding section of the validation page.</p> <!-- Update the path to link the Page Editor with the validation page and make it jump to the marker that contains a snapshot for the splash page -->
 
                     <h3>Link to the page</h3>
-                        <p><a href="splash.html">Include a link to the actual page you describe.</a></p>
+                        <p><a href="home.html">Include a link to the actual page you describe.</a></p>
             </section>
 
             <section>
-                <h2 id="volunteer">Volunteer Page</h2>
+                <h2 id="table">Table Page</h2>
                     <h3>Technical Description</h3>
                         <p>Explain the HTML and CSS techniques used to implement this page. Justify the logic and purpose of the key tags and styling choices focusing on functionality and design without copying large code sections. Explain the purpose of key HTML tags and CSS properties. Specify key HTML tags and CSS properties used to create structure and styling.</p> 
 
@@ -62,11 +63,11 @@
                         <p>Explain how you used to addressed accessibility in this particular page you implemented.</p>
 
                     <h3>Link to the validation page</h3> <!-- Update the path to link the Page Editor with the splash page -->
-                        <p><a href="validation_ST0.html#volunteerVal">Include a link to the validation page</a>, use the marker to jump to the corresponding section of the validation page.</p> <!-- Update the path to link the Page Editor with the validation page and make it jump to the marker that contains a snapshot for the splash page -->
+                        <p><a href="validation_ST2.html#table">Include a link to the validation page</a>, use the marker to jump to the corresponding section of the validation page.</p> <!-- Update the path to link the Page Editor with the validation page and make it jump to the marker that contains a snapshot for the splash page -->
 
                         
                     <h3>Link to the page</h3>
-                        <p><a href="volunteer.html">Include a link to the actual page you describe.</a></p>
+                        <p><a href="table.html">Include a link to the actual page you describe.</a></p>
             </section>
 
             <section>
@@ -78,11 +79,11 @@
                         <p>Explain how you used to addressed accessibility in this particular page you implemented.</p>
 
                     <h3>Link to the validation page</h3> <!-- Update the path to link the Page Editor with the splash page -->
-                        <p><a href="validation_ST0.html#contentVal">Include a link to the validation page</a>, use the marker to jump to the corresponding section of the validation page.</p> <!-- Update the path to link the Page Editor with the validation page and make it jump to the marker that contains a snapshot for the splash page -->
+                        <p><a href="validation_ST2.html#contentVal">Include a link to the validation page</a>, use the marker to jump to the corresponding section of the validation page.</p> <!-- Update the path to link the Page Editor with the validation page and make it jump to the marker that contains a snapshot for the splash page -->
 
                         
                     <h3>Link to the page</h3>
-                        <p><a href="content.html">Include a link to the actual page you describe.</a></p>
+                        <p><a href="content_ST2.html">Include a link to the actual page you describe.</a></p>
             </section>
 
             <section>
@@ -118,15 +119,15 @@
                 <!-- Keep only the list items you were responsible to develop, delete the rest and update the links to the corresponding markers -->
                 <li>Student 1</li>
                     <ul> 
-                        <li><a href="#splash">Splash page</a></li>
-                        <li><a href="#volunteer">Volunteer page</a></li>
-                        <li><a href="#content">Content page</a></li>
+                        <li><a href="#">Splash page</a></li>
+                        <li><a href="#">Volunteer page</a></li>
+                        <li><a href="#">Content page</a></li>
                     </ul>
                 <li>Student 2</li>
                     <ul>
-                        <li><a href="#">Home page </a></li>
-                        <li><a href="#">Table page</a></li>
-                        <li><a href="#">Content page</a></li>
+                        <li><a href="#home">Home page </a></li>
+                        <li><a href="#table">Table page</a></li>
+                        <li><a href="#content">Content page</a></li>
                     </ul>
                 <li>Student 3</li>
                     <ul>
@@ -148,8 +149,39 @@
     </div>
 
     <footer>
-            <p>&copy; 2025 SDG 3 Website | <a href="pageEditor_ST2.html">Page Editor</a></p>
-            <!--Methana Line ekat ubalage page editor eka enna one-->
+        <div class="footer-container">
+            <!-- About Section -->
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>SDG 3 Website is dedicated to promoting good health and well-being through reliable information and resources.</p>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-section footer-links">
+                <h3>Quick Links</h3>
+                <a href="home.html">Home</a>
+                <a href=#about>About</a>
+                <a href="#">Contact</a>
+                <a href="pageEditor_ST2.html">Page Editor</a>
+            </div>
+
+            <!-- Social Media -->
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="footer-bottom">
+            <p>&copy; 2025 SDG 3 Website | All Rights Reserved</p>
+        </div>
+
     </footer>
 </body>
 </html>
