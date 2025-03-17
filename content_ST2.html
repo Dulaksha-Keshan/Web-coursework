@@ -4,13 +4,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Content Page - Dulaksha Jayasinghe </title>
+    <title>Content Page - Dulaksha Jayasinghe</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <style>
         main {
             padding: 50px 10%;
             text-align: center;
+            display: flex;
+        }
+
+        .sidebar {
+            position: fixed;
+            top: 150px;
+            left: 20px;
+            width: 200px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        .sidebar a {
+            display: block;
+            padding: 10px;
+            margin-bottom: 10px;
+            color: #333;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .sidebar a:hover,
+        .sidebar a.active {
+            background-color: #27ae60; 
+            color: white;
         }
 
         .section {
@@ -21,13 +49,14 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             text-align: left;
             min-height: 570px;
-
+            margin-left: 130px; 
         }
 
         .section h2 {
             color: #2c3e50;
             margin-bottom: 10px;
         }
+
         .section li {
             margin-bottom: 10px;
         }
@@ -54,11 +83,11 @@
             margin: 0 0 15px 15px;
             border-radius: 10px;
         }
+
         img {
-            margin-bottom: 2px;
             border-radius: 10px;
-            height: 300px;
-            width: 460px;
+            height: 220px;
+            width: 320px;
         }
 
         .top {
@@ -66,13 +95,13 @@
             bottom: 5%;
             right: 5%;
         }
-                
+
         .top a {
             padding: 10px 20px;
             background-color: #007bff;
-            color: white; 
+            color: white;
             text-decoration: none;
-            border-radius: 20px; 
+            border-radius: 20px;
             font-size: 12px;
             font-weight: bold;
         }
@@ -101,127 +130,137 @@
     </header>
 
     <main>
-        <div class="section">
-            <h2>The Importance of Good Health and Well-Being</h2>
-            <p>Health is not just the absence of disease; it is a complete state of physical, mental, and social
-                well-being. SDG 3 emphasizes that every individual should have access to essential healthcare services,
-                vaccinations, and treatments, regardless of their economic status or geographic location. In many parts
-                of the world, preventable diseases continue to claim millions of lives, especially in underprivileged
-                communities. Access to clean water, nutritious food, and adequate medical care remains a distant dream
-                for many.</p>
-            <p>Ensuring good health goes beyond just treating illnesses; it also includes preventive care, mental health
-                support, and promoting healthy lifestyles. With increasing urbanization, people are experiencing higher
-                stress levels, poor air quality, and unhealthy diets, which contribute to chronic diseases such as
-                diabetes, hypertension, and cardiovascular problems. Governments and healthcare systems must work
-                together to encourage wellness-oriented lifestyles through education and better public health policies.
-            </p>
-            <img src="src/the_importance_of_good_health_and_wellbeing_2.webp"
-                alt="Health and Well-being" class="float-left">
-            <p>Another critical aspect of SDG 3 is reducing health inequalities. Marginalized groups, including women,
-                children, and the elderly, often face barriers to accessing healthcare. By addressing these disparities,
-                we can ensure that everyone has the opportunity to lead a healthy life. Community-based health programs
-                and mobile clinics can play a significant role in reaching underserved populations.</p>
-            <p>Education is also a key factor in achieving SDG 3. By educating communities about the importance of
-                hygiene, nutrition, and regular health check-ups, we can prevent many diseases before they occur.
-                Schools and community centers can serve as hubs for health education, empowering individuals to take
-                control of their well-being.</p>
+        <div class="sidebar">
+            <a href="#section1">Importance of Health</a>
+            <a href="#section2">Global Health Challenges</a>
+            <a href="#section3">Role of Technology</a>
+            <a href="#section4">Mental Health</a>
+            <a href="#section5">Contributing to SDG 3</a>
         </div>
 
-        <div class="section">
-            <h2>Global Health Challenges and Their Impact</h2>
-            <p>The world faces numerous health challenges that threaten progress in achieving SDG 3. The COVID-19
-                pandemic exposed the vulnerabilities of healthcare systems globally, overwhelming hospitals, depleting
-                medical supplies, and causing millions of deaths. While developed nations were able to roll out vaccines
-                rapidly, many developing countries struggled with accessibility, highlighting the stark disparities in
-                global health equity.</p>
-            <p>Non-communicable diseases (NCDs), such as cancer, diabetes, and respiratory disorders, are on the rise
-                due to changing lifestyles and environmental factors. These diseases often require long-term medical
-                care, making them expensive and difficult to manage in low-income nations. Addressing the root
-                causes—such as smoking, poor diets, and lack of physical activity—can prevent the rise of these health
-                problems.</p>
-            <img src="src/global_health_challenges_and_their_impact2.jpg" alt="Challenges"
-                class="float-right">
-            <p>Climate change is another significant factor affecting global health. Rising temperatures, extreme
-                weather events, and air pollution contribute to the spread of infectious diseases and exacerbate chronic
-                conditions. Addressing climate change is essential for achieving SDG 3, as it directly impacts the
-                health of populations worldwide.</p>
-            <p>In addition to these challenges, the global shortage of healthcare workers is a pressing issue. Many
-                countries, especially in developing regions, lack sufficient medical professionals to meet the needs of
-                their populations. Investing in healthcare education and training is crucial to building a robust
-                healthcare workforce that can address current and future health challenges.</p>
-        </div>
+        <div class="content">
+            <div class="section" id="section1">
+                <h2>The Importance of Good Health and Well-Being</h2>
+                <p>Health is not just the absence of disease; it is a complete state of physical, mental, and social
+                    well-being. SDG 3 emphasizes that every individual should have access to essential healthcare services,
+                    vaccinations, and treatments, regardless of their economic status or geographic location. In many parts
+                    of the world, preventable diseases continue to claim millions of lives, especially in underprivileged
+                    communities. Access to clean water, nutritious food, and adequate medical care remains a distant dream
+                    for many.</p>
+                <p>Ensuring good health goes beyond just treating illnesses; it also includes preventive care, mental health
+                    support, and promoting healthy lifestyles. With increasing urbanization, people are experiencing higher
+                    stress levels, poor air quality, and unhealthy diets, which contribute to chronic diseases such as
+                    diabetes, hypertension, and cardiovascular problems. Governments and healthcare systems must work
+                    together to encourage wellness-oriented lifestyles through education and better public health policies.
+                </p>
+                <img src="src/the_importance_of_good_health_and_wellbeing_2.webp"
+                    alt="Health and Well-being" class="float-left">
+                <p>Another critical aspect of SDG 3 is reducing health inequalities. Marginalized groups, including women,
+                    children, and the elderly, often face barriers to accessing healthcare. By addressing these disparities,
+                    we can ensure that everyone has the opportunity to lead a healthy life. Community-based health programs
+                    and mobile clinics can play a significant role in reaching underserved populations.</p>
+                <p>Education is also a key factor in achieving SDG 3. By educating communities about the importance of
+                    hygiene, nutrition, and regular health check-ups, we can prevent many diseases before they occur.
+                    Schools and community centers can serve as hubs for health education, empowering individuals to take
+                    control of their well-being.</p>
+            </div>
 
-        <div class="section">
-            <h2>The Role of Technology in Healthcare</h2>
-            <p>Technological advancements are revolutionizing healthcare and offering solutions to long-standing
-                challenges. Telemedicine has made it possible for patients in remote areas to consult with doctors
-                online, reducing the need for physical visits to healthcare facilities. Mobile health applications are
-                helping individuals track their fitness, monitor chronic conditions, and access medical advice
-                instantly.</p>
-            <p>Artificial intelligence (AI) is also transforming healthcare by enabling early disease detection,
-                personalized treatment plans, and efficient medical data analysis. AI-powered diagnostic tools are
-                helping doctors identify illnesses such as cancer at an early stage, leading to better treatment
-                outcomes. Investing in health technologies and digital infrastructure is crucial for the future of
-                medical care.</p>
-            <img src="src/role_of_technology_in_healthcare2.jpeg"
-                alt="Telemedicine" class="float-left">
-            <p>Wearable technology, such as smartwatches and fitness trackers, is empowering individuals to take control
-                of their health. These devices can monitor vital signs, track physical activity, and even detect
-                irregularities that may indicate health issues. By integrating wearable technology with healthcare
-                systems, we can create a more proactive approach to health management.</p>
-            <p>Blockchain technology is also making waves in healthcare by improving data security and patient privacy.
-                With blockchain, medical records can be securely stored and shared, ensuring that patients have control
-                over their data. This technology can also streamline administrative processes, reducing costs and
-                improving efficiency in healthcare delivery.</p>
-        </div>
+            <div class="section" id="section2">
+                <h2>Global Health Challenges and Their Impact</h2>
+                <p>The world faces numerous health challenges that threaten progress in achieving SDG 3. The COVID-19
+                    pandemic exposed the vulnerabilities of healthcare systems globally, overwhelming hospitals, depleting
+                    medical supplies, and causing millions of deaths. While developed nations were able to roll out vaccines
+                    rapidly, many developing countries struggled with accessibility, highlighting the stark disparities in
+                    global health equity.</p>
+                <p>Non-communicable diseases (NCDs), such as cancer, diabetes, and respiratory disorders, are on the rise
+                    due to changing lifestyles and environmental factors. These diseases often require long-term medical
+                    care, making them expensive and difficult to manage in low-income nations. Addressing the root
+                    causes—such as smoking, poor diets, and lack of physical activity—can prevent the rise of these health
+                    problems.</p>
+                <img src="src/global_health_challenges_and_their_impact2.jpg" alt="Challenges"
+                    class="float-right">
+                <p>Climate change is another significant factor affecting global health. Rising temperatures, extreme
+                    weather events, and air pollution contribute to the spread of infectious diseases and exacerbate chronic
+                    conditions. Addressing climate change is essential for achieving SDG 3, as it directly impacts the
+                    health of populations worldwide.</p>
+                <p>In addition to these challenges, the global shortage of healthcare workers is a pressing issue. Many
+                    countries, especially in developing regions, lack sufficient medical professionals to meet the needs of
+                    their populations. Investing in healthcare education and training is crucial to building a robust
+                    healthcare workforce that can address current and future health challenges.</p>
+            </div>
 
-        <div class="section">
-            <h2>Addressing Mental Health as a Priority</h2>
-            <p>Mental health is an often-overlooked aspect of overall well-being. Anxiety, depression, and
-                stress-related disorders affect millions of people worldwide, yet mental health services are underfunded
-                in many countries. The stigma surrounding mental illness prevents individuals from seeking help,
-                worsening the problem.</p>
-                <img src="src/eds020_illusttration-artwork-v2-repro-2-08.jpg" alt="Mental Health"
-                class="float-right">
-            <p>Promoting mental health awareness is key to achieving SDG 3. Schools, workplaces, and communities must
-                foster environments that support emotional well-being. Accessible counseling services, workplace stress
-                management programs, and community outreach initiatives can make a significant impact in addressing
-                mental health issues.</p>
-            <p>Digital mental health platforms are emerging as a valuable resource for individuals seeking support.
-                Online therapy, mental health apps, and virtual support groups provide accessible and affordable options
-                for those who may not have access to traditional mental health services. These platforms can help bridge
-                the gap in mental health care, especially in underserved areas.</p>
-            <p>It is also essential to address the mental health needs of specific populations, such as refugees,
-                veterans, and survivors of trauma. Tailored interventions and culturally sensitive approaches can help
-                these individuals cope with their unique challenges and improve their overall well-being.</p>
-        </div>
+            <div class="section" id="section3">
+                <h2>The Role of Technology in Healthcare</h2>
+                <p>Technological advancements are revolutionizing healthcare and offering solutions to long-standing
+                    challenges. Telemedicine has made it possible for patients in remote areas to consult with doctors
+                    online, reducing the need for physical visits to healthcare facilities. Mobile health applications are
+                    helping individuals track their fitness, monitor chronic conditions, and access medical advice
+                    instantly.</p>
+                <p>Artificial intelligence (AI) is also transforming healthcare by enabling early disease detection,
+                    personalized treatment plans, and efficient medical data analysis. AI-powered diagnostic tools are
+                    helping doctors identify illnesses such as cancer at an early stage, leading to better treatment
+                    outcomes. Investing in health technologies and digital infrastructure is crucial for the future of
+                    medical care.</p>
+                <img src="src/role_of_technology_in_healthcare2.jpeg"
+                    alt="Telemedicine" class="float-left">
+                <p>Wearable technology, such as smartwatches and fitness trackers, is empowering individuals to take control
+                    of their health. These devices can monitor vital signs, track physical activity, and even detect
+                    irregularities that may indicate health issues. By integrating wearable technology with healthcare
+                    systems, we can create a more proactive approach to health management.</p>
+                <p>Blockchain technology is also making waves in healthcare by improving data security and patient privacy.
+                    With blockchain, medical records can be securely stored and shared, ensuring that patients have control
+                    over their data. This technology can also streamline administrative processes, reducing costs and
+                    improving efficiency in healthcare delivery.</p>
+            </div>
 
-        <div class="section">
-            <h2>How Individuals Can Contribute to SDG 3</h2>
-            <p>Ensuring good health is not just the responsibility of governments and healthcare institutions;
-                individuals also have a role to play. Here are some ways people can contribute:</p>
-            <ul>
-                <li><i class="fas fa-user-md highlight"></i> Maintaining a balanced diet and staying physically active.
-                </li>
-                <li><i class="fas fa-hand-holding-medical highlight"></i> Getting regular health check-ups and
-                    vaccinations.</li>
-                <li><i class="fas fa-recycle highlight"></i> Reducing environmental pollution by minimizing waste and
-                    using sustainable products.</li>
-                <li><i class="fas fa-heartbeat highlight"></i> Advocating for mental health awareness and supporting
-                    those in need.</li>
-                <li><i class="fas fa-hands-helping highlight"></i> Volunteering in healthcare programs and community
-                    outreach initiatives.</li>
-            </ul>
-            <img src="src/good_lifestyle.jpeg"
-            alt="Good life style" class="float-left">
-            <p>By making conscious lifestyle choices and supporting health initiatives, individuals can help create a
-                healthier and more sustainable world for future generations.</p>
-            <p>Individuals can also advocate for policy changes that promote health equity. By supporting legislation
-                that expands access to healthcare, improves public health infrastructure, and addresses social
-                determinants of health, we can create a more just and equitable healthcare system.</p>
-            <p>Finally, spreading awareness about SDG 3 and its importance is crucial. By educating others about the
-                goals and targets of SDG 3, we can inspire collective action and drive progress toward achieving global
-                health and well-being for all.</p>
+            <div class="section" id="section4">
+                <h2>Addressing Mental Health as a Priority</h2>
+                <p>Mental health is an often-overlooked aspect of overall well-being. Anxiety, depression, and
+                    stress-related disorders affect millions of people worldwide, yet mental health services are underfunded
+                    in many countries. The stigma surrounding mental illness prevents individuals from seeking help,
+                    worsening the problem.</p>
+                    <img src="src/eds020_illusttration-artwork-v2-repro-2-08.jpg" alt="Mental Health"
+                    class="float-right">
+                <p>Promoting mental health awareness is key to achieving SDG 3. Schools, workplaces, and communities must
+                    foster environments that support emotional well-being. Accessible counseling services, workplace stress
+                    management programs, and community outreach initiatives can make a significant impact in addressing
+                    mental health issues.</p>
+                <p>Digital mental health platforms are emerging as a valuable resource for individuals seeking support.
+                    Online therapy, mental health apps, and virtual support groups provide accessible and affordable options
+                    for those who may not have access to traditional mental health services. These platforms can help bridge
+                    the gap in mental health care, especially in underserved areas.</p>
+                <p>It is also essential to address the mental health needs of specific populations, such as refugees,
+                    veterans, and survivors of trauma. Tailored interventions and culturally sensitive approaches can help
+                    these individuals cope with their unique challenges and improve their overall well-being.</p>
+            </div>
+
+            <div class="section" id="section5">
+                <h2>How Individuals Can Contribute to SDG 3</h2>
+                <p>Ensuring good health is not just the responsibility of governments and healthcare institutions;
+                    individuals also have a role to play. Here are some ways people can contribute:</p>
+                <ul>
+                    <li><i class="fas fa-user-md highlight"></i> Maintaining a balanced diet and staying physically active.
+                    </li>
+                    <li><i class="fas fa-hand-holding-medical highlight"></i> Getting regular health check-ups and
+                        vaccinations.</li>
+                    <li><i class="fas fa-recycle highlight"></i> Reducing environmental pollution by minimizing waste and
+                        using sustainable products.</li>
+                    <li><i class="fas fa-heartbeat highlight"></i> Advocating for mental health awareness and supporting
+                        those in need.</li>
+                    <li><i class="fas fa-hands-helping highlight"></i> Volunteering in healthcare programs and community
+                        outreach initiatives.</li>
+                </ul>
+                <p>By making conscious lifestyle choices and supporting health initiatives, individuals can help create a
+                    healthier and more sustainable world for future generations.</p>
+                <img src="src/good_lifestyle.jpeg"
+                alt="Good life style" class="float-left">
+                <p>Individuals can also advocate for policy changes that promote health equity. By supporting legislation
+                    that expands access to healthcare, improves public health infrastructure, and addresses social
+                    determinants of health, we can create a more just and equitable healthcare system.</p>
+                <p>Finally, spreading awareness about SDG 3 and its importance is crucial. By educating others about the
+                    goals and targets of SDG 3, we can inspire collective action and drive progress toward achieving global
+                    health and well-being for all.</p>
+            </div>
         </div>
         <p class="top"><a href="#top">Go top</a></p>
     </main>
@@ -262,6 +301,25 @@
         </div>
 
     </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const sidebarLinks = document.querySelectorAll(".sidebar a");
+            const sections = document.querySelectorAll(".section");
+
+            function activateLink() {
+                let index = sections.length;
+
+                while (--index && window.scrollY + 28 < sections[index].offsetTop) {}
+
+                sidebarLinks.forEach((link) => link.classList.remove("active"));
+                sidebarLinks[index].classList.add("active");
+            }
+
+            activateLink();
+            window.addEventListener("scroll", activateLink);
+         }); //small script to make sure to show the active link in the sidebar when scrolling
+    </script>
 </body>
 
 </html>
