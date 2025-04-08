@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Good Health & Well-being</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome CDN for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <style>
+        main {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            height: 1650px;
+            font-size: small;
+            margin: 10px;
+        }
+
+        fieldset {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+            width: 370px;
+        }
+
+        legend {
+            font-weight: bold;
+            font-size: medium;
+        }
+
+        input,
+        textarea,
+        select {
+            width: 95%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .rating {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: center;
+            gap: 50px;
+        }
+
+        .rating input {
+            display: none;
+        }
+
+        .rating label {
+            font-size: 30px;
+            cursor: pointer;
+            color: #ccc;
+        }
+
+        .rating input:checked~label,
+        .rating label:hover,
+        .rating label:hover~label {
+            color: rgb(225, 201, 65);
+        }
+
+        button {
+            background: rgb(142, 133, 133);
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 130px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        button:hover {
+            background: rgb(102, 87, 87);
+        }
+
+        .radio-group {
+            display: flex;
+            align-items: center;
+            gap: 2px;
+        }
+
+        #charCount {
+            color: black;
+            opacity: 0.5;
+            margin-top: -1px;
+            font-size: smaller;
+        }
+
+        input[type="checkbox"] {
+            position: relative;
+            top: 19px;
+        }
+
+        .error-message {
+            color: red;
+            font-size: 12px;
+            margin-top: 5px;
+            display: block;
+        }
+
+        input:invalid.user-touched,
+        textarea:invalid.user-touched,
+        select:invalid.user-touched {
+            border: 2px solid red !important;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo"><img src="src/medicine.gif" alt="logo"> Good Health & Well-being</div>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="volunteer.html">Volunteer</a></li>
+                <li><a href="table.html">Statistics</a></li>
+                <li><a href="profile.html">User Profile</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="sitemap.html">Sitemap</a></li>
+                <li><a href="team.html">Team</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <h2>Feedback Form</h2>
+            <form action="#" method="post">
+                <fieldset>
+                    <legend>Personal Details</legend>
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    <span id="nameError" class="error-message" aria-live="polite"></span><br><br>
+
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" required>
+                    <span id="emailError" class="error-message" aria-live="polite"></span><br><br>
+
+                    <label for="phone">Telephone Number:</label>
+                    <input type="tel" id="phone" name="phone" pattern="[0-9]{10}"
+                        title="Enter a valid 10-digit phone number" required>
+                    <span id="phoneError" class="error-message" aria-live="polite"></span><br><br>
+
+                    <label for="address"> Address:</label>
+                    <textarea id="address" name="address" rows="2" required></textarea>
+                    <span id="addressError" class="error-message" aria-live="polite"></span><br><br>
+                </fieldset>
+                <fieldset>
+                    <legend>Feedback Details</legend>
+
+                    <label for="health_rating">How would you rate your overall health:</label>
+                    <select id="health_rating" name="health_rating" required>
+                        <option value="" disabled selected>Select an option</option>
+                        <option value="1">Very Poor</option>
+                        <option value="2">Poor</option>
+                        <option value="3">Average</option>
+                        <option value="4">Good</option>
+                        <option value="5">Excellent</option>
+                    </select><br><br>
+
+                    <label>What type of health support would you like more of:</label>
+                    <input type="checkbox" id="mental_health" name="health_support" value="Mental Health Support">
+                    <label for="mental_health">Mental Health Support</label><br>
+
+                    <input type="checkbox" id="physical_health" name="health_support" value="Physical Health Programs">
+                    <label for="physical_health">Physical Health Programs</label><br>
+
+                    <input type="checkbox" id="nutrition" name="health_support" value="Nutrition Advice">
+                    <label for="nutrition">Nutrition Advice</label><br>
+
+                    <input type="checkbox" id="stress" name="health_support" value="Stress Management">
+                    <label for="stress">Stress Management</label><br>
+
+                    <input type="checkbox" id="exercise" name="health_support" value="Exercise Programs">
+                    <label for="exercise">Exercise Programs</label><br><br><br>
+
+                    <label>Do you need any support regarding your health and well-being?</label><br><br>
+                    <div class="radio-group">
+                        <label for="yes">Yes</label>
+                        <input type="radio" id="yes" name="support" value="Yes">
+                        <br>
+                        <label for="no">No</label>
+                        <input type="radio" id="no" name="support" value="No">
+                    </div><br><br>
+
+                    <label for="problem">If yes, please describe the assistance you need:</label><br>
+                            <textarea id="problem" name="problem" rows="3" cols="50"
+                                placeholder="Describe your issue here..."></textarea><br><br>
+
+                            <label>Would you recommend us?</label><br><br>
+                            <div class="radio-group">
+
+                                <label for="yes1">Yes</label>
+                                <input type="radio" id="yes1" name="recommend" value="yes">
+
+                                <label for="no1">No</label>
+                                <input type="radio" id="no1" name="recommend" value="no">
+                            </div><br><br>
+
+                            <label>Service Rating:</label><br><br>
+                            <div class="rating">
+                                <input type="radio" id="star5" name="rating" value="5">
+                                <label for="star5">★</label>
+
+                                <input type="radio" id="star4" name="rating" value="4">
+                                <label for="star4">★</label>
+
+                                <input type="radio" id="star3" name="rating" value="3">
+                                <label for="star3">★</label>
+
+                                <input type="radio" id="star2" name="rating" value="2">
+                                <label for="star2">★</label>
+
+                                <input type="radio" id="star1" name="rating" value="1">
+                                <label for="star1">★</label>
+                            </div><br><br>
+
+                            <label for="message">Comment or Message:</label>
+                            <textarea id="message" name="message" maxlength="250"
+                                placeholder="Share your thoughts or suggestions here..." oninput="updateCounter()"
+                                required></textarea>
+                            <p id="charCount">250 characters remaining</p><br><br>
+
+                            <label for="file">Upload Attachment:</label>
+                            <input type="file" id="file" name="file"><br><br>
+
+                            <label for="date">Date:</label>
+                            <input type="datetime-local" id="date" name="date"><br><br>
+                </fieldset><br>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+
+    </main>
+
+
+    <footer>
+        <div class="footer-container">
+            <!-- About Section -->
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>SDG 3 Website is dedicated to promoting good health and well-being through reliable information and
+                    resources.</p>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-section footer-links">
+                <h3>Quick Links</h3>
+                <a href="home.html">Home</a>
+                <a href=#about>About</a>
+                <a href="#">Contact</a>
+                <a href="pageEditor_ST3.html">Page Editor</a>
+            </div>
+
+            <!-- Social Media -->
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="footer-bottom">
+            <p>&copy; 2025 SDG 3 Website | All Rights Reserved</p>
+        </div>
+
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let inputs = document.querySelectorAll("input, textarea, select");
+
+            inputs.forEach(input => {
+                input.addEventListener("blur", function () {
+                    if (!this.checkValidity()) {
+                        this.classList.add("user-touched");
+                        let errorElement = this.nextElementSibling;
+                        if (errorElement && errorElement.classList.contains("error-message")) {
+                            errorElement.textContent = this.validationMessage;
+                        }
+                    } else {
+                        this.classList.remove("user-touched");
+                        let errorElement = this.nextElementSibling;
+                        if (errorElement && errorElement.classList.contains("error-message")) {
+                            errorElement.textContent = "";
+                        }
+                    }
+                });
+            });
+
+            document.querySelector("form").addEventListener("submit", function (event) {
+                let isValid = true;
+                inputs.forEach(input => {
+                    if (!input.checkValidity()) {
+                        isValid = false;
+                        input.classList.add("user-touched");
+                        let errorElement = input.nextElementSibling;
+                        if (errorElement && errorElement.classList.contains("error-message")) {
+                            errorElement.textContent = input.validationMessage;
+                        }
+                    }
+                });
+
+                if (!isValid) {
+                    event.preventDefault();
+                    alert("Please fill out all required fields correctly.");
+                }
+            });
+        });
+
+        function updateCounter() {
+            let textarea = document.getElementById("message");
+            let charCount = document.getElementById("charCount");
+            let remaining = 250 - textarea.value.length;
+            charCount.textContent = remaining + " characters remaining";
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Volunteer</title>
+    <link rel="stylesheet" href="style.css"/>
+    <!-- Font Awesome CDN for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+      .container {
+        width: 80%;
+        margin: auto;
+        overflow: hidden;
+      }
+      .scrollable-section {
+        display: flex;
+        overflow-x: auto;
+        gap: 20px;
+        padding: 20px 0;
+        white-space: nowrap;
+      }
+      .volunteer-card {
+        display: inline-block;
+        width: 100%;
+        max-width: 400px;
+        border: 1px solid #ddd;
+        padding: 15px;
+        box-sizing: border-box;
+        border-radius: 8px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s;
+        position: relative;
+        background-color: white;
+      }
+
+      .volunteer-card ul {
+        padding: 10px;
+      }
+      .details {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .info {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+      }
+      .icon-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      .icon {
+        width: 30px;
+        height: 30px;
+        margin-bottom: 8px;
+      }
+      span {
+        font-size: 14px;
+        color: #333;
+      }
+      .volunteer-card:hover {
+        transform: scale(1.05);
+      }
+      .dropdown {
+        margin: 10px 0;
+      }
+      .rating-summary {
+        font-size: 28px;
+        font-weight: bold;
+        color: #469045;
+        text-align: center;
+        margin: 20px 0;
+        padding: 10px;
+        background-color: hsl(180, 27%, 96%);
+        border-radius: 8px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .review-card {
+        border: 1px solid #ddd;
+        background-color: #e4e4e4;
+        padding: 10px;
+        margin: 10px 0;
+        border-radius: 5px;
+      }
+      .feedback-form textarea {
+        width: 100%;
+        height: 80px;
+        margin-bottom: 10px;
+      }
+      .feedback-buttons button {
+        padding: 10px;
+        border: none;
+        cursor: pointer;
+      }
+      .submit-btn {
+        background: #28a745;
+        color: white;
+      }
+      .cancel-btn {
+        background: gray;
+        color: white;
+      }
+      .cancel-btn:hover {
+        background: linear-gradient(45deg, #a0a0a09d, #afb2b0);
+        transform: scale(1.1);
+        border-color: #7e7e7e;
+      }
+
+      .emoji-rating span {
+        font-size: 24px;
+        cursor: pointer;
+      }
+      .emoji-rating button {
+        font-size: 2rem;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0.5rem;
+        transition: transform 0.2s;
+      }
+
+      .emoji-rating button:hover {
+        transform: scale(1.2);
+      }
+      .circle {
+        width: 20px;
+        height: 20px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-color: blue;
+        border-radius: 50%;
+        position: absolute;
+        top: 10px;
+        right: 20px;
+      }
+      .button {
+        background-color: rgb(37, 117, 29);
+        color: cornsilk;
+        padding: 12px 24px;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+      }
+      .button:hover {
+        background-color: #66ed86;
+        transform: scale(1.1);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      }
+      .button:disabled {
+        background-color: #ddd;
+        cursor: not-allowed;
+        transform: none;
+        box-shadow: none;
+      }
+      .gradient-button {
+        background: linear-gradient(45deg, #ff6b6b, #f94d6a);
+        color: white;
+        display: inline-block; 
+        width: 150px; 
+        height: 45px; 
+        padding: 12px 24px;
+        border: 2px solid transparent;
+        border-radius: 8px;
+        text-align: center;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background 0.3s, transform 0.3s, border-color 0.3s;
+        margin-right: 60px;
+      }
+
+      .second-gradient-button {
+        background: linear-gradient(45deg, #4a9a49, #45aa85);
+        color: white;
+        display: inline-block; 
+        width: 150px; 
+        height: 45px; 
+        padding: 12px 24px;
+        border: 2px solid transparent;
+        border-radius: 8px;
+        text-align: center;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background 0.3s, transform 0.3s, border-color 0.3s;
+      }
+      .gradient-button:hover {
+        background: linear-gradient(45deg, #ff9f43, #f368e0);
+        transform: scale(1.1);
+        border-color: #ff6b6b;
+      }
+      .second-gradient-button:hover {
+        background: linear-gradient(45deg, #6fc7919d, #68f39d);
+        transform: scale(1.1);
+        border-color: #21ab46;
+      }
+      .icon-text {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .icon {
+        width: 20px;
+        height: 20px;
+        vertical-align: middle;
+      }
+      .program-fee-table {
+        margin-top: 20px;
+      }
+
+      .program-fee-table table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+
+      .program-fee-table th,
+      .program-fee-table td {
+        padding: 10px;
+        text-align: left;
+      }
+
+      .program-fee-table thead th {
+        background-color: #2c3e50; 
+        color: #fff;
+      }
+
+      .program-fee-table tbody td {
+        background-color: #f3f4f6; 
+        color: #333;
+      }
+
+      .program-fee-table td {
+        border-bottom: 1px solid #ddd;
+      }
+
+      .program-fee-table th:first-child,
+      .program-fee-table td:first-child {
+        border-top-left-radius: 8px; 
+      }
+
+      .program-fee-table th:last-child,
+      .program-fee-table td:last-child {
+        border-top-right-radius: 8px; 
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+          <div class="logo"><img src="src/medicine.gif" alt="logo"> Good Health & Well-being</div>
+          <ul class="nav-links">
+              <li><a href="home.html">Home</a></li>
+              <li><a href="volunteer.html">Volunteer</a></li>
+              <li><a href="table.html">Statistics</a></li>
+              <li><a href="profile.html">User Profile</a></li>
+              <li><a href="feedback.html">Feedback</a></li>
+              <li><a href="sitemap.html">Sitemap</a></li>
+              <li><a href="team.html">Team</a></li>
+          </ul>
+      </nav>
+    </header>
+    <div class="container">
+      <h1>420 Volunteer programs found</h1>
+      <div class="dropdown">
+        <label for="sort">Sort by:</label>
+        <select id="sort">
+          <option>Most Popular</option>
+          <option>Newest</option>
+        </select>
+        <p>showing 1 to 4 of 401 results</p>
+      </div>
+      <div class="scrollable-section">
+        <div class="volunteer-card">
+          <h3>Sri lanka</h3>
+          <br/>
+          <h4>Yoga Retreat Support</h4>
+          <br/>
+          <div
+            class="circle"
+            style="background-image: url('src/srilanka.jpg')"
+          ></div>
+          <img src="src/yoga.jpg" alt="yoga retreat" style="width: 100%;"/>
+          <div class="details">
+            <div class="info">
+              <div class="icon-text">
+                <img src="src/yogaicon.png" alt="Water Icon" class="icon"/>
+                <span>Improve <br/>Flexability</span>
+              </div>
+              <div class="icon-text">
+                <img src="src/timeicon.jpg" alt="Time Icon" class="icon"/>
+                <span>3-5<br/>hours/day</span>
+              </div>
+              <div class="icon-text">
+                <img src="src/feeicon.png" alt="Fee Icon" class="icon"/>
+                <span>Fees from<br/>400$</span>
+              </div>
+            </div>
+          </div>
+          <br/>
+          <ul>
+            <li>Duration from 2-12 weeks</li>
+            <li>Volunteers aged 16+ and families</li>
+          </ul>
+          <br/>
+          <div class="program-fee-table">
+            <table>
+              <thead>
+                <tr>
+                  <th>Duration</th>
+                  <th>Program Fee</th>
+                  <th>Per Day Fee</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>2 weeks</td>
+                  <td>£435</td>
+                  <td>£31/day</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <br>
+          <p>Support peaceful yoga retreat operations!</p>
+          <br>
+          <button class="gradient-button">Apply</button>
+          <button class="second-gradient-button">View project</button>
+        </div>
+        <div class="volunteer-card">
+          <h3>Italy</h3>
+          <br/>
+          <h4>Mental Health Awareness</h4>
+          <br/>
+          <div class="circle" style="background-image: url('src/italy.jpg')"></div>
+          <img src="src/mentalhealth.jpg" alt="mentalhealth" style="width: 100%;" />
+          <div class="details">
+            <div class="info">
+              <div class="icon-text">
+                <img src="src/mentalhealthicon.png" alt="Brain Icon" class="icon"/>
+                <span>Reducing <br/>Stigma</span>
+              </div>
+              <div class="icon-text">
+                <img src="src/timeicon.jpg" alt="Time Icon" class="icon"/>
+                <span>2-3<br/>hours/day</span>
+              </div>
+              <div class="icon-text">
+                <img src="src/feeicon.png" alt="Fee Icon" class="icon"/>
+                <span>Fees from<br/>200$</span>
+              </div>
+            </div>
+          </div>
+          <br/>
+          <ul>
+            <li>Duration from 4-12 weeks</li>
+            <li>Volunteers aged 18+ and families</li>
+          </ul>
+          <br/>
+          <div class="program-fee-table">
+            <table>
+              <thead>
+                <tr>
+                  <th>Duration</th>
+                  <th>Program Fee</th>
+                  <th>Per Day Fee</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>2 weeks</td>
+                  <td>£400</td>
+                  <td>£28/day</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <br>
+          <p>Promote understanding of mental health.</p>
+          <br>
+          <button class="gradient-button">Apply</button>
+          <button class="second-gradient-button">View project</button>
+        </div>
+        <div class="volunteer-card">
+          <h3>Switzerland</h3>
+          <br/>
+          <h4>Nutrition Education</h4>
+          <div class="circle" style="background-image: url('src/switz.jpg')"></div>
+          <img src="src/nutritioneducation.jpg" alt="Nutrition Education"  style="width: 100%;"/>
+          <div class="details">
+            <div class="info">
+              <div class="icon-text">
+                <img src="src/nutritioneducationicon.png" alt="nutrition Icon" class="icon"/>
+                <span>Improved <br/>Health Outcomes</span>
+              </div>
+              <div class="icon-text">
+                <img src="src/timeicon.jpg" alt="Time Icon" class="icon"/>
+                <span>1-2<br/>hours/day</span>
+              </div>
+              <div class="icon-text">
+                <img src="src/feeicon.png" alt="Fee Icon" class="icon"/>
+                <span>Fees from<br/>600$</span>
+              </div>
+            </div>
+          </div>
+          <br/>
+          <ul>
+            <li>Duration from 4-8weeks</li>
+            <li>Volunteers aged 16+ and families</li>
+          </ul>
+          <br/>
+          <div class="program-fee-table">
+            <table>
+              <thead>
+                <tr>
+                  <th>Duration</th>
+                  <th>Program Fee</th>
+                  <th>Per Day Fee</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>2 weeks</td>
+                  <td>£150</td>
+                  <td>£10/day</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <br>
+          <p>Educate people on healthy nutrition.</p>
+          <br>
+          <button class="gradient-button">Apply</button>
+          <button class="second-gradient-button">View project</button>
+        </div>
+        <div class="volunteer-card">
+          <h3>United Kingdom</h3>
+          <br/>
+          <h4>Physical Activity for All</h4>
+          <div class="circle" style="background-image: url('src/uknew.jpg')"></div>
+          <img src="src/physicalactivity.jpg" alt="physical activity"  style="width: 100%;"/>
+          <div class="details">
+            <div class="info">
+              <div class="icon-text">
+                <img src="src/physicalactivityicon.png" alt="Water Icon" class="icon"/>
+                <span>Promote<br/>fitness</span>
+              </div>
+              <div class="icon-text">
+                <img src="src/timeicon.jpg" alt="Time Icon" class="icon"/>
+                <span>1-2<br/>hours/day</span>
+              </div>
+              <div class="icon-text">
+                <img src="src/feeicon.png" alt="Fee Icon" class="icon"/>
+                <span>Fees from<br/>350$</span>
+              </div>
+            </div>
+          </div>
+          <br/>
+          <ul>
+            <li>Duration from 2-12 weeks</li>
+            <li>Volunteers aged 16+ and families</li>
+          </ul>
+          <br/>
+          <div class="program-fee-table">
+            <table>
+              <thead>
+                <tr>
+                  <th>Duration</th>
+                  <th>Program Fee</th>
+                  <th>Per Day Fee</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>2 weeks</td>
+                  <td>£425</td>
+                  <td>£30/day</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <br>
+          <p>Encourage physical activity.</p>
+          <br>
+          <button class="gradient-button">Apply</button>
+          <button class="second-gradient-button">View project</button>
+        </div>
+      </div>
+      <h2>Ratings and Reviews</h2>
+      <p class="rating-summary">9.4/10 <br/>Exceptional (120 Reviews)</p>
+      <div class="review-card">
+        <h4>"Great Experience!"</h4>
+        <p>Helping at the shelter was amazing. <a href="#">See More</a></p>
+        <small>- John Doe, 12 Feb 2025</small>
+      </div>
+      <div class="review-card">
+        <h4>"Highly Recommended"</h4>
+        <p>Tree planting was very rewarding! <a href="#">See More</a></p>
+        <small>- Jane Smith, 15 Feb 2025</small>
+      </div>
+      <h3>Submit Feedback</h3>
+      <div class="feedback-form">
+        <textarea placeholder="Write your review here..."></textarea>
+        <div class="emoji-rating">
+          <button type="button">😀</button>
+          <button type="button">😊</button>
+          <button type="button">😐</button>
+          <button type="button">☹️</button>
+          <button type="button">😡</button>
+        </div>
+        <div class="feedback-buttons">
+          <button class="button submit-btn">Submit Feedback</button>
+          <button class="cancel-btn">Cancel</button>
+        </div>
+      </div>
+    </div>
+    <br/>
+
+    <footer>
+      <div class="footer-container">
+          <!-- About Section -->
+          <div class="footer-section">
+              <h3>About Us</h3>
+              <p>SDG 3 Website is dedicated to promoting good health and well-being through reliable information and resources.</p>
+          </div>
+  
+          <!-- Quick Links -->
+          <div class="footer-section footer-links">
+              <h3>Quick Links</h3>
+              <a href="home.html">Home</a>
+              <a href=#about>About</a>
+              <a href="#">Contact</a>
+              <a href="pageEditor_ST1.html">Page Editor</a>
+          </div>
+  
+          <!-- Social Media -->
+          <div class="footer-section">
+              <h3>Follow Us</h3>
+              <div class="social-icons">
+                  <a href="#"><i class="fab fa-facebook"></i></a>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                  <a href="#"><i class="fab fa-linkedin"></i></a>
+              </div>
+          </div>
+      </div>
+  
+      <!-- Copyright -->
+      <div class="footer-bottom">
+          <p>&copy; 2025 SDG 3 Website | All Rights Reserved</p>
+      </div>
+  
+  </footer>
+  </body>
+</html>

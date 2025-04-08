@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Good Health & Well-being</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome CDN for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <style>
+        main{
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 50px;
+        }
+        .team-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 80px;
+            padding-bottom: 40px;
+        }
+        .team-member {
+            position: relative;
+            width: 250px;
+            top: 70px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+        }
+        .team-member:hover {
+            transform: scale(1.1);
+        }
+        .team-member img {
+            width: 250px;
+            height: 310px;
+            border-radius: 10px;
+            transition: opacity 0.3s ease-in-out;
+        }
+        .team-member:hover img {
+            opacity: 0.7;
+        }
+        .details {
+            position: relative;
+            bottom: 0;
+            left: auto;
+            transform: none;
+            width: 96%;
+            background: rgb(70, 69, 69);
+            color: white;
+            text-align: center;
+            padding: 5px;
+            font-size: 14px;
+            border-radius: 5px;
+            display: none;
+            margin-bottom: 10px;
+        }
+        .team-member:hover .details {
+            display: block;
+        }
+
+        h1 {
+            color: rgb(14, 88, 26);
+
+        }
+        .name {
+            text-align: center;
+            font-weight: bold;
+            margin-bottom: 5px;
+
+        }
+        .info {
+            text-align: left;
+            padding: 10px;
+        }
+        .info ul {
+            margin: 2px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo"><img src="src/medicine.gif" alt="logo"> Good Health & Well-being</div>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="volunteer.html">Volunteer</a></li>
+                <li><a href="table.html">Statistics</a></li>
+                <li><a href="profile.html">User Profile</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="sitemap.html">Sitemap</a></li>
+                <li><a href="team.html">Team</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <h1>Meet Our Team</h1>
+        <div class="team-container">
+            <div class="team-member">
+                <img src="src/student1.jpg" alt="Team Member 1">
+                <div class="details">
+                    <div class="name">Nimeth</div>
+                    <div class="info">Role: Student 1<br>Implemented pages: 
+                       <ul> 
+                          <li>Splash Screen</li>
+                          <li>Volunteer</li>
+                          <li>Content page</li>
+                          <li>Page Editor</li>
+                        </ul>
+                    </div>      
+                </div>
+            </div>
+            <div class="team-member">
+                <img src="src/student2.jpg" alt="Team Member 2">
+                <div class="details">
+                    <div class="name">Dulaksha</div>
+                    <div class="info">Role: Student 2<br>Implemented pages:
+                       <ul>
+                          <li>Home Page + template + nav</li>
+                          <li>Table</li>
+                          <li>Content page</li>
+                          <li>Page Editor</li>
+                        </ul>  
+                    </div>
+                </div>
+            </div>
+            <div class="team-member">
+                <img src="src/student3.jpg" alt="Team Member 3">
+                <div class="details">
+                    <div class="name">Sithika</div>
+                    <div class="info">Role: Student 3<br>Implemented pages:
+                       <ul>
+                          <li>Feedback</li>
+                          <li>Team</li>
+                          <li>Content page</li>
+                          <li>Page Editor</li>
+                        </ul>  
+                    </div>
+                </div>
+            </div>
+            <div class="team-member">
+                <img src="src/student4.jpeg" alt="Team Member 4">
+                <div class="details">
+                    <div class="name">Avishka</div>
+                    <div class="info">Role: Student 4<br>Implemented pages:
+                       <ul>
+                          <li>User Profile</li>
+                          <li>Sitemap</li>
+                          <li>Content page</li>
+                          <li>Page Editor</li>
+                        </ul>  
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    </main>
+    
+
+    <footer>
+        <div class="footer-container">
+            <!-- About Section -->
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>SDG 3 Website is dedicated to promoting good health and well-being through reliable information and resources.</p>
+            </div>
+    
+            <!-- Quick Links -->
+            <div class="footer-section footer-links">
+                <h3>Quick Links</h3>
+                <a href="home.html">Home</a>
+                <a href=#about>About</a>
+                <a href="#">Contact</a>
+                <a href="pageEditor_ST3.html">Page Editor</a>
+            </div>
+    
+            <!-- Social Media -->
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Copyright -->
+        <div class="footer-bottom">
+            <p>&copy; 2025 SDG 3 Website | All Rights Reserved</p>
+        </div>
+    
+    </footer>
+ 
+</body>
+</html>

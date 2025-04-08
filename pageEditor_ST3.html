@@ -1,0 +1,191 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Editor Student - provide your student name</title>
+
+    <link rel="stylesheet" href="cssST3/pageEditor_validator.css"> <!-- External CSS link -->
+
+</head>
+<body>
+    
+    <!-- Update the header and the footer to be consistent with the rest of the pages you implemented -->
+
+    <header>
+        <header>
+            <nav>
+                <div class="logo"><img src="src/medicine.gif" alt="logo"> Good Health & Well-being</div>
+                <ul class="nav-links">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="volunteer.html">Volunteer</a></li>
+                    <li><a href="table.html">Statistics</a></li>
+                    <li><a href="profile.html">User Profile</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                    <li><a href="sitemap.html">Sitemap</a></li>
+                    <li><a href="team.html">Team</a></li>
+                </ul>
+            </nav>
+        </header>
+
+    <section class="stud">
+        <h2>Sithika Gallage, Student 3</h2>
+    </section>
+
+    <div class="container">
+        <!-- Main content area -->
+        <main>
+
+            <!-- Update those first three sections for the pages you were responsible to implement -->
+
+            <section>
+                <h2 id="feedback">Feedback Page</h2><br>
+                    <h3>Technical Description</h3>
+                        <p>The Feedback Form page is utilized to collect user feedback regarding their health and wellbeing. It is a structured HTML form with multiple input fields such as text boxes for personal details, dropdowns for selecting health ratings, checkboxes for selecting health support options, and radio buttons for user selection. Additionally, a star rating system provides an option to rate services, and a live character-counting textarea permits them to comment more. Page structure is developed with a fieldset and legend in order to group sections in a tidy fashion, thus offering a tidy and user-friendly interface.<br>For the sake of visual enhancement, CSS styling is used and blurred-glass effect is obtained through backdrop-filter to give a modern and visually enhancing interface. The form fields are appropriately styled with padding, borders, and hover effects to make the page visually appealing and user-friendly. Error messages appear in red color and get dynamically updated to provide users real-time feedback when fields are not filled in correctly. JavaScript is used to validate forms so that all the mandatory fields are filled in prior to submission. It also updates the character counter of the comment box in real-time and prevents submission of the form if there are any invalid mandatory fields.</p><br>
+                    
+                    <h3>Accessibility</h3>
+                        <p>1. Sementic HTML<br> The tags like header, main, footer, and fieldset enhances accessibility by providing a understandable structure for screen readers. Proper use of label elements ensures that form inputs are associated wth thair labels, making the form more accessble.<br>2. Keyboard Navigation<br> All form fields, text inputs, radio buttons and checkboxes are accessible and focusable and thus can be reached through the keyboard. This allows keyboard users to fill in the form succesfully.<br>3. Aria Roles and Attributes<br> Using aria-live="polite" on error messages will make screen readers speak out updates but not in a distracting manner to the user, thus improving the experience of visually implaired users.<br> The color scheme does appear to have sufficient contrast for the majority of items so that it would be simpler for visually challenged users to read the text.All input elements of the form have corresponding label elements, and error messages are displayed dynamically and hence screen reader-readable.</p><br>
+                    
+                    <h3>Link to the validation page</h3> <!-- Update the path to link the Page Editor with the splash page -->
+                        <p><a href="validation_ST3.html#feedback">Include a link to the validation page</a>, use the marker to jump to the corresponding section of the validation page.</p> <!-- Update the path to link the Page Editor with the validation page and make it jump to the marker that contains a snapshot for the splash page --><br>
+
+                    <h3>Link to the page</h3>
+                        <p><a href="feedback.html">Include a link to the actual page you describe.</a></p>
+            </section>
+
+            <section>
+                <h2 id="team">Team Page</h2><br>
+                    <h3>Technical Description</h3>
+                        <p>semantic tags such as header, nav, main, and footer to provide a logical and consistent structure. The team section is structured with a.team-container and individual.team-member divs containing an image, name, and details of their role and contribution. The.details section is initially hidden and shown on hover using CSS, giving a dynamic and interactive effect on the page. The CSS styling ensures a visually appealing design. The .team-container uses display: flex with flex-wrap: wrap to create a responsive grid of team members, while the .team-member divs have a fixed width of 250px and smooth hover effects, including scaling up (transform: scale(1.1)) and reducing opacity (opacity: 0.7). The .details section becomes visible on hover, providing additional information about each team member. Typography is well-handled, with the h1 heading styled in green (rgb(14, 88, 26)) and the .name class using bold text for emphasis. Proper spacing is maintained with gap: 80px in the .team-container.<br>flex-wrap: wrap property makes the team members wrap to the next line on smaller screens. But more media queries would make the layout even more responsive for smaller screens.team-member and.details hover effects make the user interface interactive and engaging, thus making the team section functional and aesthetically pleasing.</p><br>
+
+                    <h3>Accessibility</h3>
+                        <p>There is an alt attribute on all the team member photos, which tells the screen reader who is in the photographs for people who are visually impaired. The navigation links and footer are also accessible via keyboard, meaning keyboard-only users are able to utilize the page. There is still room for improvement, though. The.team-member and.details hover effects are not keyboard-accessible since they are only triggered by mouse use. Including:focus styles and tabindex="0" on.team-member would also make these effects keyboard-accessible. Additionally, ARIA attributes such as aria-label or aria-labelledby can be included to give additional context to screen reader users.</p><br>
+
+                    <h3>Link to the validation page</h3> <!-- Update the path to link the Page Editor with the splash page -->
+                        <p><a href="validation_ST3.html#team">Include a link to the validation page</a>, use the marker to jump to the corresponding section of the validation page.</p> <!-- Update the path to link the Page Editor with the validation page and make it jump to the marker that contains a snapshot for the splash page --><br>
+
+                        
+                    <h3>Link to the page</h3>
+                        <p><a href="team.html">Include a link to the actual page you describe.</a></p>
+            </section>
+
+            <section>
+                <h2 id="content">Content Page</h2><br>
+                    <h3>Technical Description</h3>
+                        <p>Employs semantic HTML elements such as header, nav, main, and footer to create a logical and easy-to-understand structure. The nav element holds anchor links that enable users to jump to the page's respective sections via # IDs, and all content is enclosed within a section element and includes a heading (h2), paragraph text (p), and an image (img). The footer has a.footer-container with "About Us," "Quick Links," and "Social Media" links, and a copyright message. The body uses flex-direction: column to vertically align content, and the nav is fixed to the left of the page with position: fixed and height: 100vh, creating a sidebar effect. The content is nudged with margin-left: 220px to accommodate the fixed navigation. Media queries adjust the layout for small screens (max-width: 768px), converting the vertical navigation to horizontal and overriding the fixed positioning. Headings (h1, h2) are accentuated with bold fonts, shadows, and borders through CSS, and paragraphs (p) include a line-height of 1.8 for legibility. The interactive items like navigation links with hover states (background-color, transform: scale(1.05)) and a "Go to Top" link (.go-to-top) with smooth scrolling (scroll-behavior: smooth) enhance the overall user experience.</p><br>
+
+                    <h3>Accessibility</h3>
+                        <p>the utilization of semantic HTML elements such as header, nav, main and footer that give a clear layout for screen readers. All images include an alt attribute, which enables screen readers to read aloud for the visually impaired. Navigation links and the "Go to Top" button are operable with the keyboard so that users of keyboard input can utilize the page.</p><br>
+
+                    <h3>Link to the validation page</h3> <!-- Update the path to link the Page Editor with the splash page -->
+                        <p><a href="validation_ST3.html#contentVal">Include a link to the validation page</a>, use the marker to jump to the corresponding section of the validation page.</p> <!-- Update the path to link the Page Editor with the validation page and make it jump to the marker that contains a snapshot for the splash page --><br>
+
+                        
+                    <h3>Link to the page</h3>
+                        <p><a href="content_ST3.html">Include a link to the actual page you describe.</a></p>
+            </section>
+
+            <section>
+                <h2 id="challenge"> Challenges and Lessons Learned</h2><br>
+                    <p>1. One difficulty I was encountering in creating the feedback form was showing the remaining character count dynamically for the comment field. I first attempted to accomplish this with CSS, but quickly realized that CSS was not able to monitor the user's input in real time. To achieve this, I employed JavaScript and updated the remaining character count as the user types. This lab taught me that certain things need JavaScript and not CSS and made me realize the usefulness of event handling in JavaScript more.<br>2. Another issue was with dropdown menus. There was always a default option selected, which can cause users to not notice that they need to make a selection. To assist in resolving this, I changed the dropdown so that no option was selected by default, encouraging users to make an active selection. This enhanced usability and user-friendliness of the form.
+                    
+                    </p> 
+            </section>
+
+            <section>
+                <h2 id="compliance"> Compliance</h2><br>
+                    <p>Janet guidelines govern web page publishing by making websites secure, accessible, and suitable for users. My feedback form is compliant with these guidelines in a number of ways.To begin with, the page has suitable and ethical content since it is regarding acquiring user feedback on health and fitness. There is no offensive, deceptive, or injurious content, hence making it comply with content policy.<br>Secondly, accessibility features are met by using correct HTML structure, which comprises labeled form fields, intelligible instructions, and a coherent layout. Screen reader usability is supported by correct labels, legends, and error messages that are dynamically changed for users with disabilities. The page can also be navigated with a keyboard, hence being usable by mouse-inaccessible users.<br>From a data protection and privacy point of view, the form does not save or disclose user data, as required by laws prohibiting unauthorized data gathering. Although the form does not have backend storage at present, if the form were processing data, further security practices like encryption and secure data management would be justified. Above all, the page complies with some of Janet regulation's foremost demands by promoting moral content, web accessibility, users' privacy, as well as effective web composition.</p> 
+
+                    
+            </section>
+
+            <section>
+                <h2 id="ref">References</h2>
+                <br>
+                    <ul class="ref">
+                        <li>W3C (n.d.) W3C Markup Validation Service.</i> Available at: <a href="#">https://validator.w3.org/</a> (Last accessed: 9 March 2025).</li>
+                        <li>Duckett, J., 2011. HTML and CSS: Design and Build Websites,<i>John Willey&Sons. Inc. Indianappolis.</i></li>
+                    </ul>
+            </section>
+
+            <p class="top"><a href="#top">Go top</a></p>
+        </main>
+
+        <!-- Sidebar area -->
+        <aside>
+            <h3>Core pages developed:</h3>
+
+        <!-- Customize this to the role you undertook. Keep only the list items you were responsible to develop, delete the rest -->
+            <ul class="top-level-ul">
+                <!-- Keep only the list items you were responsible to develop, delete the rest and update the links to the corresponding markers -->
+                <li>Student 1</li>
+                    <ul> 
+                        <li><a href="#splash">Splash page</a></li>
+                        <li><a href="#volunteer">Volunteer page</a></li>
+                        <li><a href="#content">Content page</a></li>
+                    </ul>
+                <li>Student 2</li>
+                    <ul>
+                        <li><a href="#">Home page </a></li>
+                        <li><a href="#">Table page</a></li>
+                        <li><a href="#">Content page</a></li>
+                    </ul>
+                <li>Student 3</li>
+                    <ul>
+                        <li><a href="#">Feedback page</a> </li>
+                        <li><a href="#">Team page</a></li>
+                        <li><a href="#">Content page</a></li>
+                    </ul>
+                <li>Student 4</li>
+                    <ul>
+                        <li><a href="#">Profile page </a></li>
+                        <li><a href="#">Sitemap page</a></li>
+                        <li><a href="#">Content page</a></li>
+                    </ul>
+                <li><a href="#challenge">Challenges and Lessons Learned</a></li>
+                <li><a href="#compliance">Compliance</a></li>
+                <li><a href="#ref">References</a></li>
+            </ul>
+        </aside>
+    </div>
+
+    <footer>
+        <footer>
+            <div class="footer-container">
+                <!-- About Section -->
+                <div class="footer-section">
+                    <h3>About Us</h3>
+                    <p>SDG 3 Website is dedicated to promoting good health and well-being through reliable information and
+                        resources.</p>
+                </div>
+    
+                <!-- Quick Links -->
+                <div class="footer-section footer-links">
+                    <h3>Quick Links</h3>
+                    <a href="home.html">Home</a>
+                    <a href=#about>About</a>
+                    <a href="#">Contact</a>
+                    <a href="pageEditor_ST2.html">Page Editor</a>
+                </div>
+    
+                <!-- Social Media -->
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Copyright -->
+            <div class="footer-bottom">
+                <p>&copy; 2025 SDG 3 Website | All Rights Reserved</p>
+            </div>
+    
+        </footer>
+</body>
+</html>

@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Good Health & Well-being</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome CDN for Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <style>
+      /* Profile Page Styles */
+
+      .container {
+        display: flex;
+        align-items: left;
+        justify-content: center;
+        width: 100%;
+        max-width: 100%;
+        gap: 200px;
+        margin: 0px;
+      }
+
+      .profile {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 30px;
+        text-align: center;
+        background-color: #f4f4f4;
+        border-radius: 10px;
+      }
+      #profile-photo {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        margin-bottom: 25px;
+      }
+
+      h2 {
+        font-size: 28px;
+        margin-bottom: 25px;
+      }
+
+      p {
+        font-size: 18px;
+        margin-bottom: 15px;
+      }
+      .progress-bar {
+        background: #4caf50;
+        height: 100%;
+        text-align: center;
+        color: #fff;
+        line-height: 20px;
+      }
+
+      button {
+        margin-left: 15px;
+        padding: 8px 15px;
+        cursor: pointer;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+      }
+
+      button:hover {
+        background-color: #0056b3;
+      }
+      .goal {
+        background-image: url("src/preview.jpg");
+        padding: 25px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        width: auto;
+        height: auto;
+        transition: transform 0.2s, box-shadow 0.2s;
+        margin: 50px;
+      }
+      .calendar {
+        background-image: url("src/ONIVXX0.jpg");
+        padding: 25px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        width: auto;
+        height: 450px;
+        transition: transform 0.2s, box-shadow 0.2s;
+        margin: 10px;
+      }
+      .menu {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        background-color: #353535;
+      }
+      .menu li,
+      a {
+        font-weight: bold;
+        font-size: 15px;
+        background-color: #ffffff00;
+        color: #e8d6d6;
+        text-decoration: none;
+        transition: all 0.2s ease 0s;
+        padding: 15px 15px;
+        display: block;
+      }
+      .menu li {
+        padding: 0;
+      }
+
+      .profile,
+      .contact,
+      .Skills,
+      .About {
+        background-image: url("src/ONIVXX0.jpg");
+        padding: 50px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        width: auto;
+        height: auto;
+        transition: transform 0.2s, box-shadow 0.2s;
+        margin: 10px;
+      }
+
+      .profile:hover,
+      .calendar:hover,
+      .goal:hover,
+      .contact:hover,
+      .About:hover {
+        transform: scale(1.05);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      .profile img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        border: 3px solid white;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      }
+
+      /* Calendar Styles */
+      .calendar table {
+        width: 100%;
+        border-collapse: collapse;
+        text-align: center;
+      }
+
+      .calendar th,
+      .calendar td {
+        padding: 12px;
+        border: 1px solid #000000;
+        cursor: pointer;
+      }
+
+      .stats-container {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 30px;
+      }
+
+      .stats-section {
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgb(255, 255, 255);
+        width: 30%;
+        text-align: center;
+        transition: transform 0.2s, box-shadow 0.2s;
+      }
+
+      .stats-section:hover {
+        transform: scale(1.05);
+        box-shadow: 0 6px 16px rgba(33, 33, 33, 0.82);
+      }
+
+      .bottomlinks {
+        background-color: #d2e12c;
+        display: flex;
+        justify-content: center;
+        list-style-type: none;
+      }
+
+      .bottomlinks li {
+        background-color: #ceefd5;
+        margin: 0 10px;
+      }
+
+      .bottomlinks a {
+        background-color: #ceefd5;
+        text-decoration: none;
+        color: #353535;
+        font-weight: bold;
+        padding: 10px;
+      }
+
+      .bottomlinks a:hover {
+        color: #51b084;
+        background-color: #353535;
+      }
+
+      /* Sitemap Container */
+      .sitemap-container {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #sitemap {
+        width: 100%;
+        height: auto;
+      }
+
+      .node {
+        fill: #ceefd5;
+        stroke: #333;
+        stroke-width: 2px;
+      }
+
+      .node-text {
+        fill: #000;
+        font-size: 12px;
+        pointer-events: none;
+      }
+
+      .line {
+        stroke: #333;
+        stroke-width: 2px;
+      }
+      .goal{
+        line-height: 3ch;
+      }
+      .contact{
+        line-height: 3ch;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">
+          <img src="src/medicine.gif" alt="logo" /> Good Health & Well-being
+        </div>
+        <ul class="nav-links">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="volunteer.html">Volunteer</a></li>
+          <li><a href="table.html">Statistics</a></li>
+          <li><a href="profile.html">User Profile</a></li>
+          <li><a href="feedback.html">Feedback</a></li>
+          <li><a href="sitemap.html">Sitemap</a></li>
+          <li><a href="team.html">Team</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="container">
+      <section class="profile">
+        <img
+          id="profile-photo"
+          src="src/v870-mynt-05.jpg"
+          alt="User Photo"
+        />
+        <h2>User Profile</h2>
+        <p><strong>Full Name:</strong> John Doe</p>
+        <p><strong>Age:</strong> 30</p>
+        <p><strong>Weight:</strong> 70 kg</p>
+        <p><strong>Height:</strong> 175 cm</p>
+      </section>
+
+      <section class="calendar">
+        <h2>Availability Calendar</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Sun</th>
+              <th>Mon</th>
+              <th>Tue</th>
+              <th>Wed</th>
+              <th>Thu</th>
+              <th>Fri</th>
+              <th>Sat</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>2</td>
+              <td>3</td>
+              <td>4</td>
+              <td>5</td>
+              <td>6</td>
+              <td>7</td>
+            </tr>
+            <tr>
+              <td>8</td>
+              <td>9</td>
+              <td>10</td>
+              <td>11</td>
+              <td>12</td>
+              <td>13</td>
+              <td>14</td>
+            </tr>
+            <tr>
+              <td>15</td>
+              <td>16</td>
+              <td>17</td>
+              <td>18</td>
+              <td>19</td>
+              <td>20</td>
+              <td>21</td>
+            </tr>
+            <tr>
+              <td>22</td>
+              <td>23</td>
+              <td>24</td>
+              <td>25</td>
+              <td>26</td>
+              <td>27</td>
+              <td>28</td>
+            </tr>
+            <tr>
+              <td>29</td>
+              <td>30</td>
+              <td>31</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="About">
+        <h1>Skills</h1>
+
+        <p>
+          <br />
+          <br />
+          <br />
+          <br />
+          full-stack developer
+        </p>
+        <br />
+        <p>Contribute to open-source projects</p>
+      </section>
+    </div>
+    <div class="P_About">
+      <section class="goal">
+        <h3>Goals</h3>
+        <br />
+     
+
+        <p>Career Goals:<br /></p>
+
+        <ul>
+          <li>
+            Secure a full-time job as a software engineer after graduation.
+            Build a successful tech startup that focuses on sustainable
+            solutions. Become proficient in multiple programming languages
+            (e.g., Python, Java, JavaScript).
+          </li>
+          <li>
+            Academic Goals: Achieve top grades in all your courses this
+            semester. Complete all assignments and projects ahead of the
+            deadlines.
+          </li>
+          <li>
+            Obtain a Master's degree in computer science from a reputable
+            university. Personal
+          </li>
+        </ul>
+        <p>Contribute to open-source projects</p>
+        <div class="progress-container">
+          <div class="progress-bar" style="width: 60%">60%</div>
+        </div>
+      </section>
+    </div>
+    <div class="d_contact">
+      <section class="contact">
+        <h3>Contact Me</h3>
+        <form action="#" method="POST">
+          <br>
+          <p>
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" required />
+          </p>
+          <p>
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" required />
+          </p>
+          <p>
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" required></textarea>
+          </p>
+          <button type="submit">Send</button>
+        </form>
+      </section>
+      <section class="About me">
+        <h3>About me</h3>
+       <p> I specialize in Skills/Expertise and enjoy creating meaningful and impactful work. 
+        When I'm not working, you can find me Hobbies/Activities.</p>
+    </p>
+    <p>
+        Feel free to explore my portfolio and get in touch if you'd like to collaborate or just say hello!
+      </section>
+    </div>
+    <footer>
+      <div class="footer-container">
+        <!-- About Section -->
+        <div class="footer-section">
+          <h3>About Us</h3>
+          <p>
+            SDG 3 Website is dedicated to promoting good health and well-being
+            through reliable information and resources.
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-section footer-links">
+          <h3>Quick Links</h3>
+          <a href="home.html">Home</a>
+          <a href="#about">About</a>
+          <a href="#">Contact</a>
+          <a href="pageEditor_ST4.html">Page Editor</a>
+        </div>
+
+        <!-- Social Media -->
+        <div class="footer-section">
+          <h3>Follow Us</h3>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Copyright -->
+      <div class="footer-bottom">
+        <p>&copy; 2025 SDG 3 Website | All Rights Reserved</p>
+      </div>
+    </footer>
+  </body>
+</html>

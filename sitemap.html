@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Health & Well-being</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome CDN for Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: "Inter", sans-serif;
+        background-image: url("src/v870-mynt-05.jpg"); /* Set the background image */
+        background-size: cover; /* Adjust to cover the entire viewport */
+        background-position: center; /* Center the image */
+        background-repeat: no-repeat; /* Prevent image repetition */
+        color: #2d6a4f;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        justify-content: center;
+        align-items: center;
+      }
+      .say {
+        margin-top: 0%;
+        padding-top: 0%;
+        position: sticky;
+        background-color: #d2e12c;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        text-align: center;
+      }
+
+      img.logoleft,
+      img.logoright {
+        background-color: #d2e12c;
+        vertical-align: middle;
+        width: 50px;
+        height: auto;
+        margin: 10px;
+      }
+      .saying {
+        background-color: #d2e12c;
+        color: #ffffff;
+        margin-top: 20px;
+        font-size: 25px;
+      }
+      .menu {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        background-color: #353535;
+      }
+      .menu li,
+      a {
+        font-weight: bold;
+        font-size: 15px;
+        background-color: #ffffff00;
+        color: #e8d6d6;
+        text-decoration: none;
+        transition: all 0.2s ease 0s;
+        padding: 15px 15px;
+        display: block;
+      }
+      .menu li {
+        padding: 0;
+      }
+      .bottomlinks {
+        background-color: #d2e12c;
+        display: flex;
+        justify-content: center;
+        list-style-type: none;
+      }
+
+      .bottomlinks li {
+        background-color: #ceefd5;
+        margin: 0 10px;
+      }
+
+      .bottomlinks a {
+        background-color: #ceefd5;
+        text-decoration: none;
+        color: #353535;
+        font-weight: bold;
+        padding: 10px;
+      }
+      .bottomlinks a:hover {
+        color: #51b084;
+        background-color: #353535;
+      }
+
+      .sitemap-container {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      #sitemap {
+        width: 100%; /*sets dimensions of the sitemap*/
+        height: auto;
+      }
+      .node {
+        fill: #43cc1d; /*the colour of the node*/
+        stroke: #333;
+        stroke-width: 2px;
+      }
+      .node-text {
+        fill: #000;
+        font-size: 12px;
+        pointer-events: none;
+      }
+      .line {
+        stroke: #333;
+        stroke-width: 2px;
+      }
+    </style>
+    <!-- css -->
+    <link rel="icon" href="3.png" />
+    <!-- icon image Fostering knowledge through quality education-->
+  </head>
+  <s_body>
+    <header>
+      <nav>
+        <div class="logo">
+          <img src="src/medicine.gif" alt="logo" /> Good Health & Well-being
+        </div>
+        <ul class="nav-links">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="volunteer.html">Volunteer</a></li>
+          <li><a href="table.html">Statistics</a></li>
+          <li><a href="profile.html">User Profile</a></li>
+          <li><a href="feedback.html">Feedback</a></li>
+          <li><a href="sitemap.html">Sitemap</a></li>
+          <li><a href="team.html">Team</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="sitemap-container">
+      <!--contains all the nodes for the rectangle-->
+      <svg id="sitemap" viewBox="0 0 1200 800">
+        <!--sets the dimensions for the viewport-->
+
+        <a href="sitemap.html">
+          <rect class="node" x="550" y="40" width="100" height="50"></rect>
+          <!--represents the coordinates for the rectangle-->
+          <text class="node-text" x="600" y="70" text-anchor="middle">
+            Sitemap
+          </text>
+          >
+          <!--represents the text within the rectangle-->
+        </a>
+
+        <!-- Nodes -->
+
+        <a href="home.html">
+          <rect class="node" x="550" y="100" width="100" height="50"></rect>
+          <!--represents the coordinates for the rectangle-->
+          <text class="node-text" x="600" y="130" text-anchor="middle">
+            Home
+          </text>
+          >
+          <!--represents the text within the rectangle-->
+        </a>
+
+        <a href="feedback.html">
+          <rect class="node" x="120" y="260" width="100" height="50"></rect>
+          <text class="node-text" x="170" y="290" text-anchor="middle">
+            Feedback
+          </text>
+        </a>
+
+        <a href="home.html">
+          <rect class="node" x="250" y="260" width="100" height="50"></rect>
+          <text class="node-text" x="300" y="290" text-anchor="middle">
+            Home Page
+          </text>
+        </a>
+
+        <a href="profile.html">
+          <rect class="node" x="380" y="260" width="100" height="50"></rect>
+          <text class="node-text" x="430" y="290" text-anchor="middle">
+            User Profile
+          </text>
+        </a>
+        <a href="volunteer.html">
+          <rect class="node" x="510" y="260" width="100" height="50"></rect>
+          <text class="node-text" x="560" y="290" text-anchor="middle">
+            Volunteer
+          </text>
+        </a>
+
+        <a href="table.html">
+          <rect class="node" x="640" y="260" width="100" height="50"></rect>
+          <text class="node-text" x="690" y="290" text-anchor="middle">
+            Table
+          </text>
+        </a>
+        <a href="splashscreen.html">
+          <rect class="node" x="0" y="260" width="100" height="50"></rect>
+          <text class="node-text" x="50" y="290" text-anchor="middle">
+            Splash Screen
+          </text>
+        </a>
+        <a href="team.html">
+          <rect class="node" x="770" y="260" width="100" height="50"></rect>
+          <text class="node-text" x="820" y="290" text-anchor="middle">
+            Team
+          </text>
+        </a>
+
+        <a href="sitemap.html">
+          <rect class="node" x="900" y="260" width="100" height="50"></rect>
+          <text class="node-text" x="950" y="290" text-anchor="middle">
+            Sitemap
+          </text>
+        </a>
+        <a href="content.html">
+          <rect class="node" x="1030" y="260" width="100" height="50"></rect>
+          <text class="node-text" x="1080" y="290" text-anchor="middle">
+            content
+          </text>
+        </a>
+
+        <a href="pageEditor_ST1.html">
+          <rect class="node" x="250" y="400" width="100" height="50"></rect>
+          <text class="node-text" x="300" y="430" text-anchor="middle">
+            Student 1
+          </text>
+        </a>
+
+        <a href="pageEditor_ST2.html">
+          <rect class="node" x="450" y="400" width="100" height="50"></rect>
+          <text class="node-text" x="500" y="430" text-anchor="middle">
+            Student 2
+          </text>
+        </a>
+
+        <a href="pageEditor_ST3.html">
+          <rect class="node" x="650" y="400" width="100" height="50"></rect>
+          <text class="node-text" x="700" y="430" text-anchor="middle">
+            Student 3
+          </text>
+        </a>
+     
+        <a href="pageEditor_ST4.html">
+          <rect class="node" x="950" y="400" width="100" height="50"></rect>
+          <text class="node-text" x="1000" y="430" text-anchor="middle">
+            Student 4
+          </text>
+        </a>
+        
+        <!-- Lines -->
+        <!-- Home to child nodes -->
+        <line class="line" x1="600" y1="150" x2="50" y2="260"></line>
+        <line class="line" x1="600" y1="150" x2="150" y2="260"></line>
+        <line class="line" x1="600" y1="150" x2="280" y2="260"></line>
+        <line class="line" x1="600" y1="150" x2="420" y2="260"></line>
+        <line class="line" x1="600" y1="150" x2="560" y2="260"></line>
+        <line class="line" x1="600" y1="150" x2="680" y2="260"></line>
+        <line class="line" x1="600" y1="150" x2="800" y2="260"></line>
+        <line class="line" x1="600" y1="150" x2="950" y2="260"></line>
+        <line class="line" x1="600" y1="150" x2="1100" y2="260"></line>
+
+        <!-- Learning Environment to Student 1 -->
+        <line class="line" x1="50" y1="310" x2="300" y2="400"></line>
+        <line class="line" x1="550" y1="310" x2="300" y2="400"></line>
+        <line class="line" x1="1070" y1="310" x2="300" y2="400"></line>
+
+        <!-- Curriculum & Instruction to Student 2 -->
+        <line class="line" x1="350" y1="310" x2="500" y2="400"></line>
+        <line class="line" x1="710" y1="310" x2="500" y2="400"></line>
+        <line class="line" x1="1070" y1="310" x2="500" y2="400"></line>
+
+        <!-- Lifelong Learning to Student 3 -->
+        <line class="line" x1="820" y1="310" x2="700" y2="400"></line>
+        <line class="line" x1="160" y1="310" x2="700" y2="400"></line>
+        <line class="line" x1="1070" y1="310" x2="700" y2="400"></line>
+
+        <!-- Community & Parental Involvement to Student 4 -->
+        <line class="line" x1="950" y1="310" x2="1000" y2="400"></line>
+        <line class="line" x1="430" y1="310" x2="1000" y2="400"></line>
+        <line class="line" x1="1070" y1="310" x2="1000" y2="400"></line>
+      </svg>
+    </div>
+
+    <!-- script to handle interactivity -->
+    <footer>
+      <div class="footer-container">
+        <!-- About Section -->
+        <div class="footer-section">
+          <h3>About Us</h3>
+          <p>
+            SDG 3 Website is dedicated to promoting good health and well-being
+            through reliable information and resources.
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-section footer-links">
+          <h3>Quick Links</h3>
+          <a href="home.html">Home</a>
+          <a href="#about">About</a>
+          <a href="#">Contact</a>
+          <a href="pageEditor_ST4.html">Page Editor</a>
+        </div>
+
+        <!-- Social Media -->
+        <div class="footer-section">
+          <h3>Follow Us</h3>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Copyright -->
+      <div class="footer-bottom">
+        <p>&copy; 2025 SDG 3 Website | All Rights Reserved</p>
+      </div>
+    </footer>
+  </body>
+</html>

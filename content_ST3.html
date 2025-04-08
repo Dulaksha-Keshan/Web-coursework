@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Good Health And Well-Being</title><!-- Font Awesome CDN for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+
+    <style>
+        html{
+            scroll-behavior: smooth;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #b3ddb8;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            background: linear-gradient(135deg, #598065, #92cca3);
+            padding: 40px 20px;
+            text-align: center; 
+            color: rgb(10, 9, 9);
+            width: 100%;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 3rem;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        nav {
+            background: linear-gradient(135deg, #689940, #7b817e);
+            padding: 20px;
+            width: 200px;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding-top: 120px;
+            box-shadow: 4px 0 6px rgba(0, 0, 0, 0.1);
+            overflow-y: auto;
+            box-sizing: border-box;
+            justify-content: start;
+            align-items: center;
+            z-index: 1;
+        }
+
+        nav a {
+            margin: 10px 0;
+            padding: 15px;
+            text-decoration: none;
+            background-color: rgba(9, 8, 8, 0.1);
+            color: rgb(255, 255, 255);
+            border-radius: 5px;
+            font-size: 1.1rem;
+            text-align: center;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            display: block;
+            width: 100%;
+        }
+
+        nav a:hover {
+            background-color: rgba(0, 0, 0, 0.2);
+            transform: scale(1.05);
+        }
+
+        main {
+            margin-left: 220px;
+            padding: 40px;
+            flex-grow: 1;
+            max-width: 800px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            color: #020203;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #0d0e0f;
+            padding-bottom: 10px;
+        }
+
+        p {
+            line-height: 1.8;
+            font-size: 1.1rem;
+            color: #555;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .go-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #0d4b26;
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+          
+        }
+
+        .go-to-top:hover {
+            background: linear-gradient(rgb(24, 66, 24))
+           
+        }
+        footer {
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            background-color: #1C5C35;
+            position: relative;
+            bottom: 0;
+            width: 100vw;
+        }
+
+
+        .footer-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            max-width: 1000px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .footer-section {
+            flex: 1;
+            min-width: 250px;
+            margin: 10px;
+        }
+
+        .footer-section h3 {
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 5px;
+            display: inline-block;
+        }
+
+        .social-icons a {
+            color: white;
+            text-decoration: none;
+            font-size: 24px;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: #3498db;
+        }
+
+        .footer-bottom {
+            margin-top: 20px;
+            font-size: 14px;
+            border-top: 1px solid #444;
+            padding-top: 10px;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            margin: 5px 0;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: #3498db;
+        }
+        footer p {
+            color: white;
+        }
+        
+        @media (max-width: 768px) {
+            nav {
+                width: 100%;
+                height: auto;
+                position: relative;
+                padding-top: 10px;
+                flex-direction: row;
+                justify-content: space-around;
+                box-shadow: none;
+            }
+
+            nav a {
+                margin: 5px 0;
+                padding: 10px;
+                font-size: 1rem;
+                width: auto;
+                text-align: center;
+            }
+
+            main {
+                margin-left: 0;
+                margin-top: 20px;
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 32px;
+            }
+
+            h2 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Good Health And Well-Being</h1>
+    </header>
+
+    <nav>
+        <a href="#introduction">Introduction</a>
+        <a href="#physical-health">Physical Health</a>
+        <a href="#mental-health">Mental Health</a>
+        <a href="#emotional-wellbeing">Emotional Wellbeing</a>
+        <a href="#preventive-measures">Preventive Measures</a>
+        
+    </nav>
+
+    <main>
+        <section id="introduction">
+            <h2>Introduction</h2>
+            <p>State of complete physical, mental, and social wellness, where individuals are not only free from illness but also able to lead fulfilling and productive lives. It involves maintaining a balanced lifestyle through regular exercise, proper nutrition, adequate sleep, and stress management. Mental health plays a crucial role, as it enables people to cope with challenges, build resilience, and maintain emotional stability. Social connections and a sense of belonging further enhance wellbeing by fostering support systems and reducing feelings of isolation. Good health and wellbeing also require access to quality healthcare, education, and resources that promote healthy living. Ultimately, it is about creating a harmonious balance between the body, mind, and environment, allowing individuals to thrive and contribute positively to their communities.</p>
+        <img src="src/intro.jpg" alt="ggg" width="350px" height="300px">
+
+        </section>
+        
+        <section id="physical-health">
+            <h2>1. Physical Health </h2>
+            <p>The proper functioning of the body and its systems, enabling individuals to perform daily activities effectively and without undue fatigue. It is a fundamental aspect of overall wellbeing and involves maintaining the body through healthy habits and preventive care. Key components of physical health include regular exercise, which strengthens muscles, improves cardiovascular health, and boosts energy levels; a balanced diet rich in essential nutrients to support bodily functions and immune system strength; adequate sleep, which allows the body to repair and rejuvenate; and avoiding harmful behaviors like smoking, excessive alcohol consumption, or drug use. Regular health check-ups and screenings also play a vital role in early detection and prevention of diseases. Good physical health not only enhances quality of life but also supports mental and emotional wellbeing, creating a strong foundation for a fulfilling and active lifestyle.
+          </p>
+          <img src="src/physical.jpeg" alt="ggg" width="350px" height="300px">
+
+      
+         
+        </section>
+
+        <section id="mental-health">
+            <h2>2. Mental Health</h2>
+            <p>A person emotional, psychological, and social well-being, encompassing how individuals think, feel, and behave in their daily lives. It is a vital aspect of overall health that enables people to cope with stress, build meaningful relationships, work productively, and make decisions. Good mental health is not just the absence of mental illnesses like anxiety or depression but also the presence of positive characteristics such as resilience, self-esteem, and a sense of purpose. Factors like genetics, life experiences, and environmental conditions can influence mental health, but it can be nurtured through self-care practices like mindfulness, therapy, and maintaining a healthy lifestyle. Addressing mental health challenges and seeking support when needed are crucial steps toward achieving balance and well-being. Ultimately, mental health is the foundation for living a fulfilling, productive, and emotionally stable life. </p>
+        <img src="src/mental.jpg" alt="ggg" width="350px" height="300px">
+    
+        </section>
+
+        <section id="emotional-wellbeing">
+            <h2>3. Emotional Wellbeing</h2>
+            <p>The ability to understand, manage, and express emotions in a healthy and balanced way. It involves being aware of your feelings, coping effectively with stress, and maintaining a positive outlook on life. Emotional wellbeing is not about being happy all the time but rather about resilience—the ability to navigate lives ups and downs with grace and adaptability. It includes building strong relationships, practicing self-compassion, and developing emotional intelligence to handle challenges constructively. Activities like mindfulness, journaling, and seeking support from loved ones or professionals can enhance emotional health. When emotional wellbeing is nurtured, individuals experience greater satisfaction, improved mental health, and stronger connections with others. It is a key component of overall wellbeing, enabling people to lead fulfilling lives and contribute positively to their communities. Prioritizing emotional health helps create a balanced, harmonious, and meaningful existence.</p>
+        <img src="src/emotional.jpg" alt="ggg" width="350px" height="300px">
+    
+        </section>
+
+        <section id="preventive-measures">
+            <h2>4. Preventive Measures</h2>
+            <p>Actions and strategies taken to avoid the onset of diseases, illnesses, or health issues before they occur. These measures focus on maintaining and improving health by reducing risk factors and promoting healthy behaviors. Examples include regular health check-ups, vaccinations, screenings for early detection of conditions like cancer or diabetes, and adopting a healthy lifestyle through balanced nutrition, regular exercise, and stress management. Preventive measures also involve avoiding harmful habits such as smoking, excessive alcohol consumption, and drug use. Public health initiatives, such as promoting hygiene, clean water, and sanitation, also fall under this category. By prioritizing prevention, individuals can reduce the likelihood of chronic illnesses, improve quality of life, and decrease healthcare costs. Ultimately, preventive measures empower people to take control of their health and well-being, ensuring a healthier future for themselves and their communities.</p>
+            <img src="src/preventive2.jpg" alt="ggg" width="350px" height="300px">
+    
+        </section>
+
+        
+    </main>
+    <footer>
+        <div class="footer-container">
+            <!-- About Section -->
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>SDG 3 Website is dedicated to promoting good health and well-being through reliable information and
+                    resources.</p>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-section footer-links">
+                <h3>Quick Links</h3>
+                <a href="home.html">Home</a>
+                <a href=#about>About</a>
+                <a href="#">Contact</a>
+                <a href="pageEditor_ST3.html">Page Editor</a>
+            </div>
+
+            <!-- Social Media -->
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="footer-bottom">
+            <p>&copy; 2025 SDG 3 Website | All Rights Reserved</p>
+        </div>
+
+    </footer>
+
+    <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="go-to-top">Go to Top</button>
+</body>
+</html>

@@ -1,0 +1,1101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Editor Student - provide your student name</title>
+
+    <link rel="stylesheet" href="cssST1/pageEditor_validator.css"> <!-- External CSS link -->
+
+</head>
+
+<body>
+
+    <!-- Update the header and the footer to be consistent with the rest of the pages you implemented -->
+
+    <header>
+        <header>
+            <nav>
+                <div class="logo"><img src="src/medicine.gif" alt="logo"> Good Health & Well-being</div>
+                <ul class="nav-links">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="volunteer.html">Volunteer</a></li>
+                    <li><a href="table.html">Statistics</a></li>
+                    <li><a href="profile.html">User Profile</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                    <li><a href="sitemap.html">Sitemap</a></li>
+                    <li><a href="team.html">Team</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="stud">
+            <h2>Nimeth Shemiyan Livera, Student 1</h2>
+        </section>
+
+        <div class="container">
+            <!-- Main content area -->
+            <main>
+
+                <!-- Update those first three sections for the pages you were responsible to implement -->
+
+                <section>
+                    <h2 id="Splash">splash Page</h2>
+                    <h3>Technical Description</h3>
+                    <p>
+                        1. HTML Structure
+                        The HTML structure of the Splash Screen is designed to provide a clear and visually appealing
+                        introduction to the website. Below are the key HTML tags and their purposes:</br></br>
+
+                        -meta charset="UTF-8" : Ensures the browser correctly interprets the text encoding, allowing for
+                        proper display of special characters.
+                        </br></br>
+                        -meta name="viewport" content="width=device-width, initial-scale=1.0" : Makes the page
+                        responsive by setting the viewport to the device's width, ensuring the layout adapts to
+                        different screen sizes.
+                        </br></br>
+                        -title : Sets the title of the webpage, which appears in the browser tab.
+                        </br></br>
+                        -link rel="stylesheet" href="style.css" : Links the external CSS file (`style.css`) to apply
+                        global styles.
+                        </br></br>
+                        -style : Contains internal CSS specific to the Splash Screen, allowing for custom styling
+                        without affecting other pages.
+                        </br></br>
+                        -div class="splash" : The main container for the splash screen content, styled to cover the
+                        entire viewport and center the content.
+                        </br></br>
+                        -h1 : Displays the main title of the website, "GOOD HEALTH AND WELL-BEING," with a large, bold
+                        font to grab attention.
+                        </br></br>
+                        -p : Used for descriptive text, including the website's mission and group member names.
+                        </br></br>
+                        -h2 : A subheading for the group members section, providing a clear hierarchy in the content.
+                        </br></br>
+                        -div class="loader”: A spinning loader animation that indicates the page is loading before
+                        redirecting to the home page.
+                        </br></br>
+                        -script : Contains JavaScript to automatically redirect the user to the home page after 3
+                        seconds.
+                        </br></br></br></br>
+
+                        2. CSS Styling
+                        The CSS styles are designed to create a visually engaging and responsive splash screen. Below
+                        are the key CSS properties and their purposes:
+                        </br></br>
+
+                        - box-sizing: border-box; : Ensures that padding and borders are included in the element's total
+                        width and height, preventing layout issues.
+                        </br></br>
+                        - body { margin: 0; overflow: hidden; }: Removes default margin and hides overflow to ensure the
+                        splash screen covers the entire viewport without scrollbars.
+                        </br></br>
+                        - .splash: The main container for the splash screen content. It uses Flexbox to center the
+                        content both vertically and horizontally. The background is set using a linear gradient overlay
+                        on top of an image, creating a visually appealing and thematic backdrop.
+                        </br></br>
+                        - display: flex; flex-direction: column; align-items: center; justify-content: center; : Centers
+                        the content both horizontally and vertically.
+                        </br></br>
+                        - height: 100vh; : Ensures the splash screen covers the entire viewport height.
+                        </br></br>
+                        - background: linear-gradient(...), url(...); : Applies a semi-transparent dark overlay on top
+                        of a background image, enhancing readability of the text.
+                        </br></br>
+                        - color: white; : Sets the text color to white for contrast against the dark background.
+                        </br></br>
+                        - text-align: center; : Centers the text horizontally.
+                        </br></br>
+
+                        - h1 : Styles the main title with a large font size, bold weight, and a color that matches the
+                        website's theme. The text shadow adds depth, making the title stand out.
+                        </br></br>
+                        - font-size: 4rem; : Large font size for emphasis.
+                        </br></br>
+                        - text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5); : Adds a shadow effect to the text for better
+                        visibility.
+                        </br></br>
+                        - animation: fadeSlideIn 1s ease-out forwards; : Applies a fade-in animation to the title,
+                        making it slide in from the bottom.
+                        </br></br>
+                        - p and h2 : These elements are styled with smaller font sizes and are animated to fade in after
+                        the title appears, creating a smooth transition.
+                        </br></br>
+                        - animation: fadeIn 1.5s ease-in forwards; : Fades in the text after a delay, ensuring a smooth
+                        visual flow.
+                        </br></br>
+
+                        - .loader : A CSS-based spinner animation that indicates the page is loading. It uses a circular
+                        border with a spinning effect.
+                        </br></br>
+                        - border: 8px solid #f3f3f3; border-top: 8px solid #366f58; : Creates a circular loader with a
+                        colored top border.
+                        </br></br>
+                        - animation: spin 2s linear infinite; : Rotates the loader continuously, creating a spinning
+                        effect.
+                        </br></br>
+
+                        - Media Queries : Adjust the font sizes and layout for smaller screens to ensure the splash
+                        screen remains visually appealing on mobile devices.
+                        </br></br>
+                        - @media (max-width: 768px) : Reduces font sizes and adjusts margins for better readability on
+                        smaller screens.
+                        </br></br></br></br>
+
+                        3. JavaScript Functionality
+                        </br></br>
+                        - setTimeout(function () { window.location.href = "home.html"; }, 3000); : Automatically
+                        redirects the user to the home page after 3 seconds, providing enough time to read the splash
+                        screen content.
+                        </br></br></br></br>
+
+                        4. Key Design Choices
+                        </br></br>
+                        - Background Image and Gradient : The combination of a background image and a dark gradient
+                        overlay ensures the text is readable while maintaining a thematic connection to the website's
+                        focus on health and well-being.
+                        </br></br>
+                        - Animations : The fade-in and slide-in animations for the title and text create a smooth and
+                        engaging user experience, making the splash screen more dynamic.
+                        </br></br>
+                        - Loader : The spinning loader provides visual feedback that the page is loading, enhancing the
+                        user experience before the redirect to the home page.
+                        </br></br>
+                        - Responsive Design : Media queries ensure the splash screen looks good on all devices, from
+                        desktops to mobile phones.
+                        </br></br></br></br>
+
+                        5. Accessibility Considerations
+                        </br></br>
+                        - Alt Text for Images : Although the background image is decorative, the text content is clearly
+                        visible and readable, ensuring accessibility.
+                        </br></br>
+                        - Keyboard Navigation : The page is simple and does not require complex navigation, making it
+                        accessible to users who rely on keyboards or screen readers.
+                        </br></br>
+
+                        This implementation ensures the splash screen is visually appealing, functional, and accessible,
+                        providing a strong first impression of the website.
+                    </p>
+                    </br></br></br></br>
+
+                    <h3>Accessibility</h3>
+                    </br></br>
+                    <p>Accessibility is a critical aspect of web design, ensuring that all users, including those with
+                        disabilities, can access and interact with the content. In the Splash Screen implementation,
+                        several techniques were used to address accessibility:
+                        </br></br></br></br>
+
+                        1. Text Readability and Contrast
+                        </br></br>
+                        High Contrast Text: The text color (color: white;) is set against a dark background (using a
+                        gradient overlay on the background image). This ensures high contrast, making the text easily
+                        readable for users with visual impairments.
+                        </br></br>
+
+                        Text Shadow: The text-shadow property is applied to the main title (h1) to enhance visibility
+                        further, especially against complex background images.
+                        </br></br>
+
+                        2. Responsive Design
+                        </br></br>
+                        Media Queries: The use of media queries ensures that the splash screen is responsive and adapts
+                        to different screen sizes. This is particularly important for users who access the site on
+                        mobile devices or with zoomed-in views.
+                        </br></br>
+
+                        Example: On smaller screens (max-width: 768px), the font sizes are reduced to ensure the text
+                        remains readable without requiring horizontal scrolling.
+                        </br></br>
+
+                        3. Keyboard Navigation
+                        </br></br>
+                        Simple Layout: The splash screen has a simple layout with no interactive elements other than the
+                        automatic redirect. This makes it easy for keyboard-only users to navigate, as there are no
+                        complex interactions or forms that require keyboard focus management.
+                        </br></br>
+
+                        Automatic Redirect: The automatic redirect to the home page after 3 seconds is implemented using
+                        JavaScript (setTimeout). While this is not directly related to keyboard navigation, it ensures
+                        that users are quickly moved to the main content of the site.
+                        </br></br>
+
+                        4. Alternative Text for Images
+                        </br></br>
+                        Background Image: The background image is purely decorative and does not convey essential
+                        information. Therefore, it does not require alternative text. However, the text content on the
+                        splash screen is clearly visible and provides all necessary information.
+                        </br></br>
+
+                        Loader Animation: The loader animation is created using CSS and does not require alternative
+                        text, as it is a visual indicator of the page loading process.
+                        </br></br>
+
+                        5. Semantic HTML
+                        </br></br>
+                        Use of Semantic Tags: Semantic HTML tags such as h1, h2, and p are used to structure the
+                        content. This helps screen readers and other assistive technologies understand the content
+                        hierarchy and read it in a logical order.
+                        </br></br>
+
+                        h1: The main title of the page, which is the most important heading.
+                        </br></br>
+
+                        h2: A subheading for the group members section, providing a clear hierarchy.
+                        </br></br>
+
+                        p: Paragraphs for descriptive text, including the website's mission and group member names.
+                        </br></br>
+                        </br></br>
+                        6. Focus on Simplicity
+                        </br></br>
+                        Minimalist Design: The splash screen is designed to be simple and straightforward, with minimal
+                        text and no complex interactions. This reduces the cognitive load for users with cognitive
+                        disabilities and makes the content easier to understand.
+                        </br></br>
+
+                        Clear Purpose: The purpose of the splash screen is clearly communicated through the text
+                        content, ensuring that users understand what the website is about before being redirected to the
+                        home page.
+                        </br></br>
+
+                        7. Animation and Timing
+                        </br></br>
+                        Fade-In Animations: The fade-in animations for the text content are subtle and do not flash or
+                        move rapidly, which could be problematic for users with vestibular disorders or epilepsy.
+                        </br></br>
+
+                        Timing: The animations are timed to ensure that the text appears gradually, giving users enough
+                        time to read the content before the automatic redirect.
+                        </br></br>
+
+                        8. JavaScript Considerations
+                        </br></br>
+                        Graceful Degradation: The automatic redirect is implemented using JavaScript, but the page
+                        remains functional even if JavaScript is disabled. Users will still see the splash screen
+                        content and can manually navigate to the home page if needed.
+                        </br></br>
+
+                        Summary
+                        </br></br>
+                        The Splash Screen implementation addresses accessibility through:
+                        </br></br>
+
+                        High contrast text and background for readability.
+                        </br></br>
+
+                        Responsive design to ensure usability on all devices.
+                        </br></br>
+
+                        Simple layout and semantic HTML for easy navigation and understanding.
+                        </br></br>
+
+                        Subtle animations and timing to avoid causing discomfort for users with certain disabilities.
+                        </br></br>
+
+                        Clear and concise content that communicates the purpose of the page effectively.
+                        </br></br>
+
+                        By incorporating these accessibility considerations, the Splash Screen ensures that it is usable
+                        and accessible to a wide range of users, including those with disabilities.
+                        </br></br>
+
+
+
+                    </p>
+                    </br></br></br></br>
+
+                    <h3>Link to the validation page</h3>
+                    <!-- Update the path to link the Page Editor with the splash page -->
+                    <p><a href="validation_ST1.html#splash">Include a link to the validation page</a>, use the marker to
+                        jump to the corresponding section of the validation page.</p>
+                    <!-- Update the path to link the Page Editor with the validation page and make it jump to the marker that contains a snapshot for the splash page -->
+
+                    <h3>Link to the page</h3>
+                    <p><a href="splashscreen.html">Include a link to the actual page you describe.</a></p>
+                </section>
+
+                <section>
+                    <h2 id="volunteer">volunteer Page</h2>
+                    <h3>Technical Description</h3>
+                    </br></br>
+
+                    <p>The Volunteer page is designed to provide users with detailed information about volunteering
+                        programs related to health and well-being. It includes interactive elements, a scrollable
+                        section for program details, a ratings and reviews section, and a feedback form. Below is a
+                        detailed explanation of the HTML and CSS techniques used, focusing on functionality, design, and
+                        accessibility.
+                        </br></br></br></br>
+
+                        1. HTML Structure
+                        </br></br>
+                        The HTML structure is designed to organize the content logically and ensure accessibility. Key
+                        HTML tags and their purposes are:
+                        Header and Navigation
+                        </br></br>
+                        -header : Contains the navigation bar, which is consistent across all pages of the website.
+                        </br></br>
+                        -nav : Wraps the navigation links, ensuring semantic structure for screen readers.
+                        </br></br>
+                        -ul class="nav-links" : An unordered list is used to structure the navigation links, making it
+                        easy for screen readers to interpret.
+                        </br></br>
+                        -a href="..." : Anchor tags are used for navigation, ensuring users can move between pages
+                        seamlessly.
+                        </br></br>
+                        -img src="src/medicine.gif" alt="logo" : The logo image includes an alt attribute for
+                        accessibility, describing the image to screen readers.
+                        </br></br></br></br>
+                        Main Content Container
+                        </br></br>
+                        -div class="container" : The main container holds all the content of the Volunteer page,
+                        ensuring proper alignment and spacing.
+                        </br></br>
+                        -h1 : The main heading introduces the page, clearly stating the number of volunteer programs
+                        available. This provides a clear hierarchy for screen readers.
+                        </br></br>
+                        -div class="dropdown" : Contains a dropdown menu for sorting volunteer programs. This is
+                        implemented using a "select" element, which is accessible and easy to use.
+                        </br></br>
+                        -label for="sort" : Associates the label with the dropdown menu, improving accessibility for
+                        screen readers.
+                        </br></br>
+                        -select id="sort" : The dropdown menu allows users to sort programs by popularity or newest.
+                        </br></br></br></br>
+                        Scrollable Volunteer Program Cards
+                        </br></br>
+                        -div class="scrollable-section" : A scrollable container is used to display volunteer program
+                        cards horizontally, allowing users to browse through programs easily.
+                        </br></br>
+                        -div class="volunteer-card": Each volunteer program is represented as a card, containing details
+                        such as the program name, location, duration, and fees.
+                        </br></br>
+                        -h3 and h4 : Headings are used to structure the program name and location, ensuring a clear
+                        hierarchy for screen readers.
+                        </br></br>
+                        -Img : Images are used to visually represent each program, with alt attributes for accessibility
+                        (e.g., alt="yoga retreat").
+                        </br></br>
+                        -ul : Unordered lists are used to display program details (e.g., duration, age requirements) in
+                        a structured format, making it easy for screen readers to interpret.
+                        </br></br>
+                        -table : A table is used to display program fees, ensuring the data is organized and easy to
+                        read. The table includes thead and tbody for semantic structure.
+                        </br></br>
+                        -button class="gradient-button" : Buttons for "Apply" and "View Project" are styled with
+                        gradients and hover effects to enhance interactivity.
+                        </br></br></br></br>
+                        Ratings and Reviews Section
+                        </br></br>
+                        div class="rating-summary" : Displays the overall rating of the programs, providing users with a
+                        quick summary of reviews.
+                        </br></br>
+                        div class="review-card" : Each review is displayed in a card format, with a "See More" link for
+                        expanded content.
+                        </br></br>
+                        a href="#">See More a : The "See More" link allows users to expand the review content, though it
+                        is currently a placeholder (#).
+                        </br></br></br></br>
+                        Feedback Form
+                        </br></br>
+                        div class="feedback-form" : A form allows users to submit feedback, including a text area for
+                        comments and emoji buttons for rating.
+                        </br></br>
+                        textarea : A text area is used for users to write their feedback, with a placeholder for
+                        instructions (e.g., "Write your review here...").
+                        </br></br>
+                        div class="emoji-rating" : Contains emoji buttons for users to rate their experience. The
+                        buttons are styled to be large and interactive.
+                        </br></br>
+                        button type="button">😀 button>: Emoji buttons are used for rating, providing a visual and
+                        interactive way for users to express their feedback.
+                        </br></br>
+                        button class="button submit-btn" : A submit button for the feedback form, styled to match the
+                        website's theme.
+                        </br></br>
+                        button class="cancel-btn" : A cancel button, allowing users to clear their feedback without
+                        submitting.
+                        </br></br></br></br>
+                        Footer
+                        </br></br>
+                        footer : The footer contains links to other pages, social media icons, and copyright
+                        information, ensuring users can navigate the site easily.
+                        </br></br>
+                        div class="footer-section" : Organizes the footer content into sections (e.g., "About Us,"
+                        "Quick Links," "Follow Us").
+                        </br></br>
+                        a href="pageEditor_ST2.html" : A link to the page editor, ensuring users can access information
+                        about the page's creator.
+                        </br></br>
+                        div class="social-icons" : Contains social media icons, styled using Font Awesome for
+                        consistency and accessibility.
+                        </br></br></br></br>
+
+                        2. CSS Styling
+                        </br></br>
+                        The CSS styles are designed to create a visually appealing and responsive layout. Key CSS
+                        properties and their purposes are:
+                        </br></br></br></br>
+                        Global Styles
+                        </br></br>
+                        -body { font-family: Arial, sans-serif; }: Sets a clean and readable font for the entire page.
+                        </br></br>
+                        -.container { width: 80%; margin: auto; }: Centers the content on the page and ensures it
+                        doesn't stretch too wide on larger screens.
+                        </br></br>
+                        Scrollable Section
+                        </br></br>
+                        -.scrollable-section { display: flex; overflow-x: auto; gap: 20px; }: Creates a horizontally
+                        scrollable section for volunteer program cards.
+                        </br></br>
+                        -flex: Ensures the cards are displayed in a row.
+                        </br></br>
+                        -overflow-x: auto;: Allows horizontal scrolling if the content overflows.
+                        </br></br>
+                        -gap: 20px;: Adds spacing between cards for better readability.
+                        </br></br></br></br>
+                        Volunteer Program Cards
+                        </br></br>
+                        -.volunteer-card { border: 1px solid #ddd; border-radius: 8px; box-shadow: 2px 2px 10px rgba(0,
+                        0, 0, 0.1); }: Styles each volunteer program card with a border, rounded corners, and a subtle
+                        shadow for a modern look.
+                        </br></br>
+                        -transition: transform 0.3s;: Adds a smooth hover effect, scaling the card slightly when users
+                        hover over it.
+                        </br></br>
+                        -hover: transform: scale(1.05);: Enhances interactivity by making the card grow slightly on
+                        hover.
+                        </br></br></br></br>
+                        Icons and Text Alignment
+                        </br></br>
+                        -.icon-text { display: flex; align-items: center; gap: 10px; }: Aligns icons and text
+                        vertically, ensuring a clean and organized layout.
+                        </br></br>
+                        -gap: 10px;: Adds spacing between icons and text for better readability.
+                        </br></br></br></br>
+                        Program Fee Table
+                        </br></br>
+                        -.program-fee-table { border-collapse: collapse; }: Styles the program fee table with
+                        alternating row colors and rounded corners for a polished look.
+                        </br></br>
+                        -thead th { background-color: #2c3e50; color: #fff; }: Styles the table header with a dark
+                        background and white text for contrast.
+                        </br></br>
+                        -tbody td { background-color: #f3f4f6; }: Adds a light background to table rows for better
+                        readability.
+                        </br></br></br></br>
+                        Buttons
+                        </br></br>
+                        -.gradient-button { background: linear-gradient(45deg, #ff6b6b, #f94d6a); }: Styles the "Apply"
+                        and "View Project" buttons with a gradient background, making them visually appealing.
+                        </br></br>
+                        -hover: transform: scale(1.1);: Adds a hover effect to the buttons, making them grow slightly
+                        when users hover over them.
+                        </br></br></br></br>
+                        Emoji Rating
+                        </br></br>
+                        -.emoji-rating button { font-size: 2rem; background: none; border: none; }: Styles the emoji
+                        rating buttons, making them large and interactive.
+                        </br></br>
+                        -hover: transform: scale(1.2);: Adds a hover effect to the emoji buttons, making them grow
+                        slightly when users hover over them.
+                        </br></br></br></br>
+                        Footer
+                        </br></br>
+                        -.footer-section { display: flex; justify-content: space-between; }: Organizes the footer
+                        content into sections, ensuring it is easy to navigate.
+                        </br></br>
+                        -.social-icons { display: flex; gap: 10px; }: Aligns social media icons horizontally with
+                        spacing between them.
+                        </br></br></br></br>
+
+                        Summary
+                        </br></br>
+                        The Volunteer page is implemented using a combination of semantic HTML and modern CSS techniques
+                        to create a visually appealing, interactive, and accessible user experience. Key features
+                        include:
+                        </br></br>
+                        -A scrollable section for browsing volunteer programs.
+                        </br></br>
+                        -Interactive cards with hover effects.
+                        </br></br>
+                        -A feedback form with emoji ratings.
+                        </br></br>
+                        -A responsive design that works on all devices.
+
+                    </p>
+                    </br></br></br></br>
+                    <h3>Accessibility</h3>
+                    <p>Accessibility is a critical aspect of web design, ensuring that all users, including those with
+                        disabilities, can access and interact with the content. In the Volunteer page implementation,
+                        several techniques were used to address accessibility. Below is a detailed explanation of how
+                        accessibility was addressed in the provided code:
+                        </br></br> </br></br>
+                        1. Semantic HTML
+                        </br></br>
+                        Semantic HTML tags are used to provide a clear structure and meaning to the content, making it
+                        easier for screen readers and other assistive technologies to interpret the page.
+                        </br></br>
+                        -Headings (h1, h2, h3, etc.): Headings are used to create a logical hierarchy of content. For
+                        example:
+                        </br></br>
+                        -h1: Used for the main heading of the page ("420 Volunteer programs found").
+                        </br></br>
+                        -h2: Used for subheadings like "Ratings and Reviews."
+                        </br></br>
+                        -h3: Used for individual program names (e.g., "Yoga Retreat Support").
+                        </br></br>
+                        This hierarchy helps screen readers navigate the page and understand the relationship between
+                        different sections.
+                        </br></br>
+                        -Lists (ul, li): Unordered lists are used to display program details (e.g., duration, age
+                        requirements). This ensures that screen readers can read the content in a structured manner.
+                        </br></br>
+                        -Tables (table , thead , tbody , th , tr , td ): Tables are used to display program fees in a
+                        structured format. The use of thead and th ensures that screen readers can properly interpret
+                        the table headers and data.
+                        </br></br> </br></br>
+
+                        2. Alt Text for Images
+                        </br></br>
+                        All images on the page include alt attributes, which provide alternative text descriptions for
+                        screen readers. This ensures that users with visual impairments can understand the content of
+                        the images.
+                        </br></br>
+                        Run HTML
+                        </br></br>
+                        -The alt attribute describes the image as "yoga retreat," which is read aloud by screen readers.
+                        </br></br>
+                        -Decorative Images: For purely decorative images (e.g., icons), the alt attribute is left empty
+                        (alt="") to indicate that the image does not convey essential information.
+                        </br></br> </br></br>
+
+                        3. Keyboard Navigation
+                        </br></br>
+                        The page is designed to be fully navigable using a keyboard, ensuring that users who cannot use
+                        a mouse can still interact with the content.
+                        </br></br>
+                        -Focusable Elements: All interactive elements (e.g., buttons, links, form inputs) are focusable
+                        by default, allowing users to navigate through them using the Tab key.
+                        </br></br>
+                        -Dropdown Menu: The select element used for sorting programs is fully accessible via keyboard.
+                        Users can navigate through the options using the arrow keys and select an option using the Enter
+                        key.
+                        </br></br> </br></br>
+
+                        4. ARIA Attributes
+                        </br></br>
+                        ARIA (Accessible Rich Internet Applications) attributes are used to enhance accessibility for
+                        dynamic content and interactive elements.
+                        </br></br>
+                        • aria-label: Although not explicitly used in the provided code, ARIA labels can be added to
+                        elements like buttons or icons to provide additional context for screen readers.
+                        </br></br> </br></br>
+
+                        5. Form Accessibility
+                        </br></br>
+                        The feedback form is designed to be accessible, with proper labels and input types.
+                        </br></br>
+                        -Labels for Input Fields: The label element is used to associate text labels with form inputs,
+                        ensuring that screen readers can read the labels when the input is focused.
+                        </br></br>
+                        -Textarea for Feedback: The textarea element includes a placeholder attribute to provide
+                        instructions for users.
+                        </br></br>
+                        -Emoji Buttons: The emoji buttons for rating are implemented as "button" elements, making them
+                        accessible via keyboard.
+                        </br></br> </br></br>
+
+                        6. Contrast and Readability
+                        </br></br>
+                        The page uses high-contrast colors and readable fonts to ensure that the content is accessible
+                        to users with visual impairments.
+                        </br></br>
+                        -Text Contrast: The text color (color: white;) is set against a dark background, ensuring high
+                        contrast for readability.
+                        </br></br>
+                        -Button Contrast: Buttons like "Apply" and "View Project" use gradient backgrounds with
+                        high-contrast text colors.
+                        </br></br> </br></br>
+
+                        7. Responsive Design
+                        </br></br>
+                        The page is designed to be responsive, ensuring that it is accessible on all devices, including
+                        desktops, tablets, and mobile phones.
+                        </br></br>
+                        -Media Queries: Media queries are used to adjust the layout and font sizes for smaller screens.
+                        </br></br> </br></br>
+
+                        8. Focus Indicators
+                        </br></br>
+                        Interactive elements like buttons and links have visible focus indicators, ensuring that users
+                        navigating with a keyboard can see which element is currently focused.
+                        </br></br> </br></br>
+
+                        Summary
+                        </br></br>
+                        The Volunteer page addresses accessibility through:
+                        </br></br>
+                        -Semantic HTML for clear content structure.
+                        </br></br>
+                        -Alt text for images to assist screen readers.
+                        </br></br>
+                        -Keyboard navigation for users who cannot use a mouse.
+                        </br></br>
+                        -ARIA attributes for dynamic content (though not extensively used in this implementation).
+                        </br></br>
+                        -Form accessibility with proper labels and input types.
+                        </br></br>
+                        -High-contrast colors and readable fonts for users with visual impairments.
+                        </br></br>
+                        -Responsive design for accessibility on all devices.
+
+                    </p>
+                    </br></br> </br></br>
+
+                    <h3>Link to the validation page</h3>
+                    <!-- Update the path to link the Page Editor with the splash page -->
+                    <p><a href="validation_ST1.html#volunteer">Include a link to the validation page</a>, use the marker
+                        to jump to the corresponding section of the validation page.</p>
+                    <!-- Update the path to link the Page Editor with the validation page and make it jump to the marker that contains a snapshot for the splash page -->
+
+
+                    <h3>Link to the page</h3>
+                    <p><a href="volunteer.html">Include a link to the actual page you describe.</a></p>
+                </section>
+
+                <section>
+                    <h2 id="content">Content Page</h2>
+                    <h3>Technical Description</h3>
+                    </br></br>
+                    <p>The Health and Well-Being content page is designed to provide users with detailed information
+                        about various aspects of health and well-being, including preventive care, mental health,
+                        nutrition, digital health, and community engagement. Below is a detailed explanation of the HTML
+                        and CSS techniques used, focusing on functionality, design, and accessibility.
+                        </br></br></br></br>
+
+                        1. HTML Structure
+                        </br></br>
+                        The HTML structure is designed to organize the content logically and ensure accessibility. Key
+                        HTML tags and their purposes are:
+                        </br></br>
+                        Header
+                        </br></br>
+                        -header : Contains the main heading of the page, which introduces the topic of health and
+                        well-being.
+                        </br></br>
+                        -h1 : The main heading ("Good health & Well Being") is styled to be large and bold, ensuring it
+                        stands out and provides a clear hierarchy for screen readers.
+                        </br></br></br></br>
+                        Navigation Bar
+                        </br></br>
+                        -nav class="nav" : A fixed navigation bar on the left side of the page allows users to quickly
+                        jump to different sections of the content.
+                        </br></br>
+                        -a href="#introduction" : Anchor tags are used to link to different sections of the page using
+                        id attributes (e.g., #introduction, #preventive). This allows for smooth scrolling within the
+                        page.
+                        </br></br>
+                        -a : Each navigation link is styled to be visually distinct and interactive, with hover effects
+                        to enhance user experience.
+                        </br></br></br></br>
+                        Main Content
+                        </br></br>
+                        -main : The main content area contains multiple sections, each focusing on a specific topic
+                        related to health and well-being.
+                        </br></br>
+                        -section id="introduction" : Each section is identified by a unique id (e.g., #introduction,
+                        #preventive), which corresponds to the navigation links.
+                        </br></br>
+                        -h2 : Subheadings (e.g., "Introduction," "Preventive Care and Early Intervention") are used to
+                        structure the content and provide a clear hierarchy for screen readers.
+                        </br></br>
+                        -p : Paragraphs are used to provide detailed information about each topic. The text is styled to
+                        be readable, with appropriate line height and font size.
+                        </br></br>
+                        -div class="image-container" : Images are placed within a container to ensure they are centered
+                        and responsive. Each image includes an alt attribute for accessibility.
+                        </br></br>
+                        -img src="preventive.jpg" alt="preventive care" : Images are used to visually support the
+                        content, with alt text describing the image for screen readers.
+                        </br></br></br></br>
+                        Footer
+                        </br></br>
+                        -footer : The footer contains links to other pages, social media icons, and copyright
+                        information.
+                        </br></br>
+                        -div class="footer-container" : The footer is divided into sections (e.g., "About Us," "Quick
+                        Links," "Follow Us") for better organization.
+                        </br></br>
+                        -a href="pageEditor_ST2.html" : A link to the page editor is included, ensuring users can access
+                        information about the page's creator.
+                        </br></br>
+                        -div class="social-icons" : Social media icons are styled using Font Awesome, providing a
+                        visually appealing way to link to external platforms.
+                        </br></br></br></br>
+                        "Go to Top" Button
+                        </br></br>
+                        -a href="#top" class="gotop" : A "Go to Top" button is fixed at the bottom-right corner of the
+                        page, allowing users to quickly return to the top of the page. This is especially useful for
+                        long pages.
+                        </br></br></br></br>
+
+                        2. CSS Styling
+                        </br></br>
+                        The CSS styles are designed to create a visually appealing and responsive layout. Key CSS
+                        properties and their purposes are:
+                        </br></br>
+                        Global Styles
+                        </br></br>
+                        -* { margin: 0; padding: 0; box-sizing: border-box; }: Resets default margins and padding,
+                        ensuring consistent spacing across all elements.
+                        </br></br>
+                        -body { font-family: 'Inter', sans-serif; background: #d4edda; }: Sets a clean and readable font
+                        for the entire page, with a light green background for a calming effect.
+                        </br></br>
+                        -scroll-behavior: smooth;: Enables smooth scrolling when users click on navigation links.
+                        </br></br></br></br>
+                        Header
+                        </br></br>
+                        -header { background-color: #598065; padding: 40px 20px; }: The header is styled with a dark
+                        green background and centered text, making it visually distinct.
+                        </br></br>
+                        -h1 { font-size: 3rem; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); }: The main heading is large
+                        and bold, with a subtle shadow for emphasis.
+                        </br></br></br></br>
+                        Navigation Bar
+                        </br></br>
+                        -.nav { background: linear-gradient(135deg, #282b26, #131715); width: 200px; height: 100vh;
+                        position: fixed; }: The navigation bar is fixed on the left side of the page, with a gradient
+                        background and vertical layout.
+                        </br></br>
+                        -a { padding: 15px; background-color: rgba(255, 255, 255, 0.1); }: Navigation links are styled
+                        with padding and a semi-transparent background, making them visually distinct.
+                        </br></br>
+                        -a:hover { background-color: rgba(255, 255, 255, 0.2); transform: scale(1.05); }: Hover effects
+                        enhance interactivity, with a slight scale increase and background color change.
+                        </br></br></br></br>
+                        Main Content
+                        </br></br>
+                        -main { margin-left: 220px; padding: 40px; background: white; border-radius: 10px; box-shadow: 0
+                        4px 6px rgba(0, 0, 0, 0.1); }: The main content area is offset to the right of the navigation
+                        bar, with a white background, rounded corners, and a subtle shadow for depth.
+                        </br></br>
+                        -section { margin-bottom: 40px; }: Sections are spaced apart to ensure readability.
+                        </br></br>
+                        -h2 { font-size: 2.2rem; border-bottom: 3px solid #0d0e0f; padding-bottom: 10px; }: Subheadings
+                        are large and bold, with a bottom border for visual separation.
+                        </br></br>
+                        -p { line-height: 1.8; font-size: 1.1rem; color: #555; }: Paragraph text is styled for
+                        readability, with a comfortable line height and a muted color.
+                        </br></br></br></br>
+                        Images
+                        </br></br>
+                        -.image-container { display: grid; place-items: center; }: Images are centered within their
+                        containers, ensuring a clean and organized layout.
+                        </br></br>
+                        -img { max-width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0,
+                        0.1); }: Images are responsive, with rounded corners and a subtle shadow for a polished look.
+                        </br></br></br></br>
+                        "Go to Top" Button
+                        </br></br>
+                        -.gotop { position: fixed; bottom: 20px; right: 20px; background: linear-gradient(135deg,
+                        #000000, #78bd72); }: The "Go to Top" button is fixed at the bottom-right corner, with a
+                        gradient background and rounded shape.
+                        </br></br>
+                        -hover { background: linear-gradient(135deg, #0e1316, #3d956f); transform: translateY(-2px); }:
+                        Hover effects enhance interactivity, with a slight upward movement and color change.
+                        </br></br></br></br>
+                        Footer
+                        </br></br>
+                        -footer { background-color: #1C5C35; color: white; }: The footer has a dark green background and
+                        white text, ensuring high contrast for readability.
+                        </br></br>
+                        -.footer-container { display: flex; justify-content: space-around; }: The footer content is
+                        organized into sections, with flexible spacing for responsiveness.
+                        </br></br>
+                        -.social-icons a { color: white; font-size: 24px; }: Social media icons are styled to be large
+                        and visually distinct, with hover effects for interactivity.
+                        </br></br></br></br>
+
+                        3. Responsive Design
+                        </br></br>
+                        -Media Queries: The page is designed to be responsive, with adjustments for smaller screens.
+                        </br></br>
+                        -@media (max-width: 768px) { .nav { width: 100%; height: auto; position: relative; } }: On
+                        smaller screens, the navigation bar becomes horizontal and adjusts to fit the screen width.
+                        </br></br>
+                        -main { margin-left: 0; padding: 20px; }: The main content area adjusts to fit the screen,
+                        ensuring readability on mobile devices.
+                        </br></br></br></br>
+
+                        Summary
+                        </br></br>
+                        The Health and Well-Being content page is implemented using a combination of semantic HTML and
+                        modern CSS techniques to create a visually appealing, interactive, and accessible user
+                        experience. Key features include:
+                        </br></br>
+                        -A fixed navigation bar for easy section navigation.
+                        </br></br>
+                        -Smooth scrolling for a seamless user experience.
+                        </br></br>
+                        -Responsive images and layout for accessibility on all devices.
+                        </br></br>
+                        -A "Go to Top" button for quick navigation on long pages.
+                        </br></br>
+                        -A footer with links to other pages and social media icons.
+                    </p>
+                    </br></br></br></br>
+
+                    <h3>Accessibility</h3>
+                    <p>Accessibility is a critical aspect of web design, ensuring that all users, including those with
+                        disabilities, can access and interact with the content. In the Health and Well-Being content
+                        page implementation, several techniques were used to address accessibility. Below is a detailed
+                        explanation of how accessibility was addressed in the provided code:
+                        </br></br> </br></br>
+
+                        1. Semantic HTML
+                        </br></br>
+                        Semantic HTML tags are used to provide a clear structure and meaning to the content, making it
+                        easier for screen readers and other assistive technologies to interpret the page.
+                        </br></br>
+                        -Headings (h1, h2, h3, etc.): Headings are used to create a logical hierarchy of content. For
+                        example:
+                        </br></br>
+                        h1: Used for the main heading of the page ("Good health & Well Being").
+                        </br></br>
+                        h2: Used for subheadings like "Introduction," "Preventive Care," etc.
+                        </br></br>
+                        This hierarchy helps screen readers navigate the page and understand the relationship between
+                        different sections.
+                        </br></br>
+                        -Lists (ul, li): Although not extensively used in this page, lists are a common way to structure
+                        content for screen readers. In this page, the navigation links are structured as anchor tags
+                        within a nav element, which is semantically correct for navigation.
+                        </br></br>
+                        -Sections (section): Each topic (e.g., "Introduction," "Preventive Care") is wrapped in a
+                        section tag with a unique id. This allows screen readers to identify and navigate to different
+                        sections of the page easily.
+                        </br></br> </br></br>
+
+                        2. Alt Text for Images
+                        </br></br>
+                        All images on the page include alt attributes, which provide alternative text descriptions for
+                        screen readers. This ensures that users with visual impairments can understand the content of
+                        the images.
+                        </br></br>
+                        -The alt attribute describes the image as "preventive care," which is read aloud by screen
+                        readers.
+                        </br></br>
+                        Decorative Images: For purely decorative images (e.g., icons in the footer), the alt attribute
+                        is left empty (alt="") to indicate that the image does not convey essential information.
+                        </br></br> </br></br>
+
+                        3. Keyboard Navigation
+                        </br></br>
+                        The page is designed to be fully navigable using a keyboard, ensuring that users who cannot use
+                        a mouse can still interact with the content.
+                        </br></br>
+                        Focusable Elements: All interactive elements (e.g., buttons, links, form inputs) are focusable
+                        by default, allowing users to navigate through them using the Tab key.
+                        </br></br>
+                        "Go to Top" Button: The "Go to Top" button is accessible via keyboard, allowing users to quickly
+                        return to the top of the page.
+                        </br></br> </br></br>
+
+                        4. ARIA Attributes
+                        </br></br> </br></br>
+                        ARIA (Accessible Rich Internet Applications) attributes are used to enhance accessibility for
+                        dynamic content and interactive elements.
+                        </br></br>
+                        aria-label: Although not explicitly used in the provided code, ARIA labels can be added to
+                        elements like buttons or icons to provide additional context for screen readers.
+                        </br></br> </br></br>
+
+                        5. Contrast and Readability
+                        </br></br>
+                        The page uses high-contrast colors and readable fonts to ensure that the content is accessible
+                        to users with visual impairments.
+                        </br></br>
+                        Text Contrast: The text color (color: white;) in the header and footer is set against a dark
+                        background, ensuring high contrast for readability.
+                        </br></br>
+                        Button Contrast: Buttons like the "Go to Top" button use gradient backgrounds with high-contrast
+                        text colors.
+                        </br></br> </br></br>
+
+                        6. Responsive Design
+                        </br></br>
+                        The page is designed to be responsive, ensuring that it is accessible on all devices, including
+                        desktops, tablets, and mobile phones.
+                        </br></br>
+                        Media Queries: Media queries are used to adjust the layout and font sizes for smaller screens.
+                        </br></br> </br></br>
+
+                        7. Focus Indicators
+                        </br></br>
+                        Interactive elements like buttons and links have visible focus indicators, ensuring that users
+                        navigating with a keyboard can see which element is currently focused.
+                        </br></br> </br></br>
+
+                        Summary
+                        </br></br>
+                        The Health and Well-Being content page addresses accessibility through:
+                        </br></br>
+                        -Semantic HTML for clear content structure.
+                        </br></br>
+                        -lt text for images to assist screen readers.
+                        </br></br>
+                        -Keyboard navigation for users who cannot use a mouse.
+                        </br></br>
+                        -ARIA attributes for dynamic content (though not extensively used in this implementation).
+                        </br></br>
+                        -High-contrast colors and readable fonts for users with visual impairments.
+                        </br></br>
+                        -Responsive design for accessibility on all devices.
+                        </br></br>
+                        -Focus indicators for keyboard navigation.
+
+                    </p>
+                    </br></br> </br></br>
+
+                    <h3>Link to the validation page</h3>
+                    <!-- Update the path to link the Page Editor with the splash page -->
+                    <p><a href="validation_ST1.html">Include a link to the validation page</a>, use the marker to jump
+                        to the corresponding section of the validation page.</p>
+                    <!-- Update the path to link the Page Editor with the validation page and make it jump to the marker that contains a snapshot for the splash page -->
+
+
+                    <h3>Link to the page</h3>
+                    <p><a href="content_ST1.html">Include a link to the actual page you describe.</a></p>
+                </section>
+
+                <section>
+                    <h2 id="challenge"> Challenges and Lessons Learned</h2>
+                    <p>During the implementation of the Splash Screen, Volunteer Page, and Content Page for the SDG 3
+                        website, several challenges were encountered and resolved, leading to valuable lessons. For the
+                        splash screen, synchronizing the text animation with the loader's timing was initially
+                        problematic, resulting in abrupt transitions, but this was resolved by using setTimeout() and
+                        CSS keyframe animations, which taught the importance of managing transitions effectively for a
+                        smooth user experience. On the volunteer page, ensuring the responsive display of volunteer
+                        cards on mobile devices posed a challenge as the cards did not resize properly. This was
+                        addressed by using a flexbox layout with horizontal scrolling, along with media query
+                        adjustments, highlighting the value of testing layouts across devices. The content page faced
+                        layout issues with the navigation menu, particularly in maintaining proper alignment and
+                        avoiding overflow on larger screens. A fixed sidebar and smooth scroll behavior were implemented
+                        to resolve this, emphasizing the importance of designing intuitive user interfaces that enhance
+                        both aesthetics and usability. These experiences underscored the need for careful planning,
+                        testing, and refinement to achieve a polished, user-friendly website across different platforms.
+
+                    </p>
+                </section>
+
+                <section>
+                    <h2 id="compliance"> Compliance</h2>
+                    <p>The SDG 3 website pages comply with Janet regulations through accessibility, data privacy, and
+                        content standards. Accessibility features include responsive design, alt text for images, and
+                        screen reader-friendly HTML. While the site doesn't currently collect sensitive data, future
+                        features will ensure data privacy through SSL encryption and compliance with GDPR. All content
+                        respects copyright laws, using properly attributed images and licensed resources. For
+                        user-generated content, moderation will be applied to prevent harmful content, and security
+                        measures like input sanitization will protect against vulnerabilities. Overall, the site meets
+                        key compliance standards, with plans for further enhancements.</p>
+
+
+                </section>
+
+                <section>
+                    <h2 id="ref">References</h2>
+                    <p>Provide links to resources you used following a consistent format (e.g., APA, MLA, or a
+                        simplified style). For example:<br><br>
+                    <ul class="ref">
+                        <li>iStock (2025) <i>iStock.</i> Available at: <a href="#">https://www.istockphoto.com/</a>
+                            (Last accessed: 11 Feb 2025).</li>
+                        <li>Duckett, J., 2011. HTML and CSS: Design and Build Websites,<i>John Willey&Sons. Inc.
+                                Indianappolis.</i></li>
+                    </ul>
+                </section>
+
+                <p class="top"><a href="#top">Go top</a></p>
+            </main>
+
+            <!-- Sidebar area -->
+            <aside>
+                <h3>Core pages developed:</h3>
+
+                <!-- Customize this to the role you undertook. Keep only the list items you were responsible to develop, delete the rest -->
+                <ul class="top-level-ul">
+                    <!-- Keep only the list items you were responsible to develop, delete the rest and update the links to the corresponding markers -->
+                    <li>Student 1</li>
+                    <ul>
+                        <li><a href="#splash">Splash page</a></li>
+                        <li><a href="#volunteer">Volunteer page</a></li>
+                        <li><a href="#content">Content page</a></li>
+                    </ul>
+                    <li>Student 2</li>
+                    <ul>
+                        <li><a href="#">Home page </a></li>
+                        <li><a href="#">Table page</a></li>
+                        <li><a href="#">Content page</a></li>
+                    </ul>
+                    <li>Student 3</li>
+                    <ul>
+                        <li><a href="#">Feedback page</a> </li>
+                        <li><a href="#">Team page</a></li>
+                        <li><a href="#">Content page</a></li>
+                    </ul>
+                    <li>Student 4</li>
+                    <ul>
+                        <li><a href="#">Profile page </a></li>
+                        <li><a href="#">Sitemap page</a></li>
+                        <li><a href="#">Content page</a></li>
+                    </ul>
+                    <li><a href="#challenge">Challenges and Lessons Learned</a></li>
+                    <li><a href="#compliance">Compliance</a></li>
+                    <li><a href="#ref">References</a></li>
+                </ul>
+            </aside>
+        </div>
+
+        <footer>
+            <footer>
+                <div class="footer-container">
+                    <!-- About Section -->
+                    <div class="footer-section">
+                        <h3>About Us</h3>
+                        <p>SDG 3 Website is dedicated to promoting good health and well-being through reliable
+                            information and
+                            resources.</p>
+                    </div>
+
+                    <!-- Quick Links -->
+                    <div class="footer-section footer-links">
+                        <h3>Quick Links</h3>
+                        <a href="home.html">Home</a>
+                        <a href=#about>About</a>
+                        <a href="#">Contact</a>
+                        <a href="pageEditor_ST1.html">Page Editor</a>
+                    </div>
+
+                    <!-- Social Media -->
+                    <div class="footer-section">
+                        <h3>Follow Us</h3>
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Copyright -->
+                <div class="footer-bottom">
+                    <p>&copy; 2025 SDG 3 Website | All Rights Reserved</p>
+                </div>
+
+            </footer>
+</body>
+
+</html>
